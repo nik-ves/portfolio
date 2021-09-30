@@ -1,0 +1,43 @@
+.name {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.text-box {
+  color: grey;
+  margin-top: 5rem;
+  max-width: 65rem;
+  padding: 2rem;
+}
+
+.text {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.text a {
+  color: #fff;
+}
+
+.text a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+@media only screen and (max-width: 550px) {
+  .text-box {
+    margin-top: 1rem;
+    padding: 2rem 0;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 1.3rem;
+  }
+}
