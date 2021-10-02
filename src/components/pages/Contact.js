@@ -1,9 +1,10 @@
 import Container from "../UI/Container";
+import Form from "../ContactComponents/Form";
 
 const Contact = () => {
   return (
     <Container>
-      <h1>Contact page - Work in progress</h1>
+      <Form />
     </Container>
   );
 };

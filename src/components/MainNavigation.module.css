@@ -1,6 +1,7 @@
 .header {
   padding: 1.5rem 0;
   /* border-bottom: 3px solid #fff; */
+  
 }
 
 .logo-box a {
@@ -123,5 +124,8 @@
   }
   .icon {
     display: block;
+  }
+  .logo-box a {
+    font-size: 3rem;
   }
 }

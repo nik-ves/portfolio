@@ -29,6 +29,14 @@
   border-bottom: 1px solid #fff;
 }
 
+.horizontal-line {
+  color: #fff;
+  background-color: #fff;
+  height: 0.1rem;
+  border-color: #fff;
+  margin: 2rem;
+}
+
 @media only screen and (max-width: 550px) {
   .text-box {
     margin-top: 1rem;
