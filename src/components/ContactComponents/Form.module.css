@@ -30,6 +30,7 @@
 }
 
 .form-control textarea {
+  font: inherit;
   width: 100%;
   max-width: 45rem;
   height: 10rem;
@@ -78,26 +79,20 @@
 
 button {
   font: inherit;
-  background-color: transparent;
-  color: white;
-  border: 1px solid grey;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover,
-button:active {
-  background-color: #333333;
-  border-color: #333333;
-}
-
 button:disabled,
 button:disabled:hover,
 button:disabled:active {
-  background-color: #ccc;
-  color: #292929;
-  border-color: #ccc;
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
   cursor: not-allowed;
 }
 
