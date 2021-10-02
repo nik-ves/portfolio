@@ -25,13 +25,20 @@ html {
   font-family: "Roboto Slab", serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-a {
-  text-decoration: none;
+.centered {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
 }
-

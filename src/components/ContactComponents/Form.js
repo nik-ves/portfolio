@@ -46,7 +46,7 @@ const Form = () => {
 
   return (
     <div className={classes.wrapper}>
-      <form onSubmit={formSubmissionHandler} className={classes.form}>
+      <form onSubmit={formSubmissionHandler} className={classes.form} method="POST">
         <div className={classes["form-control"]}>
           <div className={classes["form-control"]}>
             <label htmlFor="name">Name</label>

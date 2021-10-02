@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 
+import MainNavigation from "./components/MainNavigation";
 import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
-import MainNavigation from "./components/MainNavigation";
+import NotFound from "./components/pages/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
 
         <Route path="/contact">
           <Contact />
+        </Route>
+
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Fragment>
