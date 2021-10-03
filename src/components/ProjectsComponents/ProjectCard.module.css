@@ -31,7 +31,11 @@
 }
 
 .card:hover {
-  background-color: #333333;
+  background-color: #DC843A;
+}
+
+.card:hover p {
+  color: black;
 }
 
 @media only screen and (max-width: 550px) {

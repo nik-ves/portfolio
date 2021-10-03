@@ -79,7 +79,7 @@ const MainNavigation = () => {
             <li>
               <a
                 className={classes.test}
-                href="https://www.linkedin.com/in/nikola-veselinovi%C4%87-0a87741ba/"
+                href="https://www.linkedin.com/in/nikves/"
                 target="_blank"
               >
                 <FiLinkedin size={22} className={classes.socials} />
@@ -148,7 +148,7 @@ const MainNavigation = () => {
               <li>
                 <a
                   className={classes.test}
-                  href="https://www.linkedin.com/in/nikola-veselinovi%C4%87-0a87741ba/"
+                  href="https://www.linkedin.com/in/nikves/"
                   target="_blank"
                 >
                   <FiLinkedin size={22} className={classes.socials} />

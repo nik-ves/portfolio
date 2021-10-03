@@ -4,7 +4,7 @@ const HomeText = () => {
   const links = {
     github: "https://github.com/nik-ves",
     instagram: "https://www.instagram.com/dzonigram/",
-    linkedin: "https://www.linkedin.com/in/nikola-veselinovi%C4%87-0a87741ba/",
+    linkedin: "https://www.linkedin.com/in/nikves/",
     mail: "mailto:nik-ves@hotmail.com",
   };
 
@@ -36,10 +36,6 @@ const HomeText = () => {
         <br />
 
         <p className={classes.text}>
-          {/* Outside of coding and programming, I enjoy listening to music and
-          traveling. Some of my photos can be found on Instagram. If you
-          happened to be in the same city I live (currently in Wenzhou), maybe
-          we can hang out and take some photos or code together. */}
           When i'm not studying I like to spend my free time by playing pool,
           going to the arcade or just listening to music.
         </p>

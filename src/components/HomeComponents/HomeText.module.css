@@ -22,19 +22,26 @@
 }
 
 .text a {
-  color: #fff;
+  color: #DC843A;
 }
 
 .text a:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #DC843A;
 }
 
 .horizontal-line {
-  color: #fff;
-  background-color: #fff;
   height: 0.1rem;
-  border-color: #fff;
+  border-color: #DC843A;
   margin: 2rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .name {
+    font-size: 3rem;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -49,3 +56,5 @@
     font-size: 1.3rem;
   }
 }
+
+

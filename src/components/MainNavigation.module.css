@@ -1,13 +1,11 @@
 .header {
   padding: 1.5rem 0;
-  /* border-bottom: 3px solid #fff; */
-  
 }
 
 .logo-box a {
   font-size: 4rem;
   text-decoration: none;
-  color: #fff;
+  color: #DC843A;
   line-height: 6rem;
 }
 
@@ -27,7 +25,6 @@
   list-style: none;
   align-items: center;
   font-size: 1.8rem;
-  
 }
 
 .nav li {
@@ -37,36 +34,30 @@
 
 .nav a {
   text-decoration: none;
-  color: #fff;
+  color: #DC843A;
   transition: all 0.2s;
   border-bottom: 3px solid transparent;
 }
 
 .nav a:hover {
-  color: grey;
+  color: #fff;
 }
 
 .nav a.active {
-  color: grey;
-  border-bottom: 3px solid grey;
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .line-vertical {
   display: block;
   height: 30px;
-  color: white;
-  border-right: 1px solid #ccc
+  border-right: 1px solid #fff;
 }
 
 .line-horizontal {
   display: block;
   width: 100px;
-  color: white;
-  border-bottom: 3px solid #ccc
-}
-
-.test {
-  display: flex;
+  border-bottom: 3px solid #DC843A;
 }
 
 .hamburger {
@@ -116,6 +107,7 @@
 .icon {
   display: none;
   z-index: 10;
+  color: #DC843A;
 }
 
 @media only screen and (max-width: 550px) {
@@ -127,5 +119,14 @@
   }
   .logo-box a {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .logo-box a {
+    font-size: 3rem;
+  }
+  .nav ul {
+    font-size: 1.4rem;
   }
 }
