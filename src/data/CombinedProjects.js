@@ -60,7 +60,7 @@ const PROJECTS = [
         "What are Frontend Mentor and Codewell? Easiest way to explain is to take a quote from the Frontend Mentor: `Gain real experience of building websites and providing code reviews. Build your portfolio and help others achieve their goals.`",
     },
     githubLink: "https://github.com/nik-ves/web-challenges",
-    previewLink: "https://nik-ves.github.io/web-challenges/",
+    previewLink: "https://fm-nik-ves.netlify.app",
     imgPath: "/images/web-challenges.png",
   },
   {
