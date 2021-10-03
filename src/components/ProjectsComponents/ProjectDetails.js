@@ -17,14 +17,6 @@ const ProjectDetails = () => {
 
   const project = projects.find((project) => project.id === params.projectId);
 
-  if (!project) {
-    return (
-      <div className="centered">
-        <p>No project found!</p>
-      </div>
-    );
-  }
-
   return (
     <Container>
       <div className={classes.centered}>

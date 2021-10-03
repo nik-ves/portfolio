@@ -1,9 +1,7 @@
-import Container from "../UI/Container";
-
 import ProjectDetails from "../ProjectsComponents/ProjectDetails";
 
-const TestPage = () => {
+const ProjectDetail = () => {
   return <ProjectDetails />;
 };
 
-export default TestPage;
+export default ProjectDetail;

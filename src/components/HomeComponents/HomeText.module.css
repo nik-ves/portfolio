@@ -11,7 +11,7 @@
 
 .text-box {
   color: grey;
-  margin-top: 5rem;
+  margin: 5rem 0;
   max-width: 65rem;
   padding: 2rem;
 }
@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 550px) {
   .text-box {
-    margin-top: 1rem;
+    margin: 1rem 0;
     padding: 2rem 0;
   }
   .name {

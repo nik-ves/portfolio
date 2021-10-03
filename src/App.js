@@ -5,8 +5,10 @@ import MainNavigation from "./components/MainNavigation";
 import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
-import NotFound from "./components/pages/NotFound";
-import TestPage from "./components/pages/TestPage";
+import ProjectDetail from "./components/pages/ProjectDetail";
+import PageNotFound from "./components/pages/PageNotFound";
+import ProjectNotFound from "./components/pages/ProjectNotFound";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,17 +25,23 @@ function App() {
         </Route>
 
         <Route path="/projects/:projectId">
-          <TestPage />
+          <ProjectDetail />
         </Route>
 
         <Route path="/contact">
           <Contact />
         </Route>
 
+        <Route path="/projects/*">
+          <ProjectNotFound />
+        </Route>
+
         <Route path="*">
-          <NotFound />
+          <PageNotFound />
         </Route>
       </Switch>
+
+      <Footer />
     </Fragment>
   );
 }
