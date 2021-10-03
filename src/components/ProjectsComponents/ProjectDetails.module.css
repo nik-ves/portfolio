@@ -20,19 +20,21 @@
 
 .project-image-enlarger {
   z-index: 300;
+  min-height: 100vh;
+  min-width: 200vh;
   display: flex;
   justify-content: center;
   object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .project-image-enlarger img {
   border: 3px solid #dc843a;
-  width: 80%;
+  max-width: 80%;
 }
 
 .picture-text {

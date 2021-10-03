@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useParams } from "react-router";
-import { FiGithub, FiEye } from "react-icons/fi";
 
 import classes from "./ProjectDetails.module.css";
 import Container from "../UI/Container";
@@ -40,6 +39,7 @@ const ProjectDetails = () => {
             <img src={project.imgPath} onClick={openImageHandler} />
           </div>
         )}
+        
 
         <div className={classes["project-info"]}>
           <h2>{project.name}</h2>
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           </p>
           <p className={classes["project-info-links"]}>
             Click <a href={project.previewLink}>here</a> to see live preview of
-            the project or <a href={project.githubLink}>here</a> to see projects
+            the project or <a href={project.githubLink}>here</a> to see project
             code on GitHub.
           </p>
         </div>
