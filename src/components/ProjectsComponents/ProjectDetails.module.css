@@ -1,5 +1,5 @@
 .centered {
-  margin: 1.5rem 0;
+  margin: 5rem 0;
   justify-content: center;
   font-size: 3rem;
   color: #fff;
@@ -48,6 +48,15 @@
   margin-bottom: 1.5rem;
 }
 
+.project-text-box {
+  margin: 5rem 0;
+}
+
+.project-info {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
 .project-info h2 {
   font-size: 3.5rem;
   text-align: center;
@@ -57,11 +66,12 @@
 .project-info-description {
   color: grey;
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project-info-links {
   color: grey;
+  margin-top: 2rem;
 }
 
 .project-info-links {
@@ -98,6 +108,9 @@
 }
 
 @media only screen and (max-width: 550px) {
+  .centered {
+    margin: 3rem 0;
+  }
   .project-image-box img {
     height: 30rem;
   }

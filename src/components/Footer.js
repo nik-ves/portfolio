@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <header className={classes.header}>
       <Container>
-        <p>2021 © Nikola Veselinovic</p>
+        <p>2021 © Nikola Veselinović</p>
       </Container>
     </header>
   );

@@ -7,7 +7,6 @@ import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import ProjectDetail from "./components/pages/ProjectDetail";
 import PageNotFound from "./components/pages/PageNotFound";
-import ProjectNotFound from "./components/pages/ProjectNotFound";
 import Footer from "./components/Footer";
 
 function App() {
@@ -30,10 +29,6 @@ function App() {
 
         <Route path="/contact">
           <Contact />
-        </Route>
-
-        <Route path="/projects/*">
-          <ProjectNotFound />
         </Route>
 
         <Route path="*">

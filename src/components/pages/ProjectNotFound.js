@@ -1,4 +1,4 @@
-const TestError = () => {
+const ProjectNotFound = () => {
   return (
     <div className="centered">
       <p>Project not found!</p>
@@ -6,4 +6,4 @@ const TestError = () => {
   );
 };
 
-export default TestError;
+export default ProjectNotFound;
