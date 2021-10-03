@@ -1,0 +1,37 @@
+.centered {
+  margin-top: 1.5rem;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  object-fit: cover;
+}
+
+.project-image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image-box img {
+  border: 3px solid #DC843A;
+  height: 500px;
+  width: 800px;
+  object-fit: cover;
+}
+
+.projecttest {
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.projecttest img {
+  border: 3px solid #DC843A;
+  width: 80%;
+}
+

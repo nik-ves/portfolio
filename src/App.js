@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import NotFound from "./components/pages/NotFound";
+import TestPage from "./components/pages/TestPage";
 
 function App() {
   return (
@@ -17,8 +18,12 @@ function App() {
           <Home />
         </Route>
 
-        <Route path="/projects">
+        <Route path="/projects" exact>
           <Projects />
+        </Route>
+
+        <Route path="/projects/:projectId">
+          <TestPage />
         </Route>
 
         <Route path="/contact">
