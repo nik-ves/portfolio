@@ -15,19 +15,19 @@ const LANDING_PAGE_PROJECTS = [
     id: 3,
     name: "trillo",
     desc: "If you need help booking a hotel or renting a car, Trillo is made for you.",
-    link: "https://github.com/nik-ves/trillo",
+    link: "/projects/trillo",
   },
   {
     id: 4,
     name: "nexter",
     desc: "Finding a new house is hard and Nexter is here to help you out.",
-    link: "https://github.com/nik-ves/nexter",
+    link: "/projects/nexter",
   },
   {
     id: 5,
     name: "web-challenges",
     desc: "Solutions from landing page challenge websites such as Frontend-Mentor and Codewell.",
-    link: "https://github.com/nik-ves/web-challenges",
+    link: "/projects/web-challenges",
   },
 ];
 

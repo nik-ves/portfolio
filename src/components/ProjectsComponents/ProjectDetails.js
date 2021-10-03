@@ -33,23 +33,27 @@ const ProjectDetails = () => {
           <img src={project.imgPath} alt="test" onClick={openImageHandler} />
         </div>
         {isOpen && (
-          <div className={classes.projecttest} onClick={openImageHandler}>
-            <img
-              src={project.imgPath}
-              onClick={openImageHandler}
-            />
+          <div
+            className={classes["project-image-enlarger"]}
+            onClick={openImageHandler}
+          >
+            <img src={project.imgPath} onClick={openImageHandler} />
           </div>
         )}
 
-        <p>{project.name}</p>
-        <div>
-          <a href={project.githubLink} exact target="_blank">
-            <FiGithub size={20} />
-          </a>
-
-          <a href={project.previewLink} exact target="_blank">
-            <FiEye size={20} />
-          </a>
+        <div className={classes["project-info"]}>
+          <h2>{project.name}</h2>
+          <p className={classes["picture-text"]}>
+            Click on the image to see its preview.
+          </p>
+          <p className={classes["project-info-description"]}>
+            {project.description.text1} <br /> {project.description.text2}
+          </p>
+          <p className={classes["project-info-links"]}>
+            Click <a href={project.previewLink}>here</a> to see live preview of
+            the project or <a href={project.githubLink}>here</a> to see projects
+            code on GitHub.
+          </p>
         </div>
       </div>
     </Container>

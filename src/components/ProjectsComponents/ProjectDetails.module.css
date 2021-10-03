@@ -12,13 +12,13 @@
 }
 
 .project-image-box img {
-  border: 3px solid #DC843A;
+  border: 3px solid #dc843a;
   height: 500px;
   width: 800px;
   object-fit: cover;
 }
 
-.projecttest {
+.project-image-enlarger {
   z-index: 300;
   display: flex;
   justify-content: center;
@@ -30,8 +30,38 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.projecttest img {
-  border: 3px solid #DC843A;
+.project-image-enlarger img {
+  border: 3px solid #dc843a;
   width: 80%;
 }
 
+.picture-text {
+  font-size: 1.3rem;
+  color: grey;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-info h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.project-info-description {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.project-info-links {
+  font-size: 1.8rem;
+}
+.project-info-links a {
+  font-size: 1.8rem;
+  color: #dc843a;
+}
+
+.project-info-links a:hover {
+  border-bottom: 2px solid #dc843a;
+}

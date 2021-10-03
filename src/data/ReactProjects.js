@@ -3,31 +3,31 @@ const REACT_PROJECTS = [
     id: 1,
     name: "expense-tracker",
     desc: "Tracker expense app made with React.js. Includes a year filter.",
-    link: "https://github.com/nik-ves/expense-tracker-app",
+    link: "/projects/expense-tracker",
   },
   {
     id: 2,
     name: "user-listing",
     desc: "Basic users listing app made with React.js with some form validation.",
-    link: "https://github.com/nik-ves/users-listing-app",
+    link: "/projects/user-listing",
   },
   {
     id: 3,
-    name: "food-ordering",
+    name: "food-order",
     desc: "Food ordering app which is connected with Firebase database. Includes a simple form validation.",
-    link: "https://github.com/nik-ves/order-food-app",
+    link: "/projects/food-order",
   },
   {
     id: 4,
     name: "form-validator",
     desc: "Validate user input with this. After submiting, user information will be shown in the console.",
-    link: "https://github.com/nik-ves/form-validation-app",
+    link: "/projects/form-validator",
   },
   {
     id: 5,
     name: "todo-app",
     desc: "Basic Todo app.",
-    link: "https://github.com/nik-ves/todo-app",
+    link: "/projects/todo-app",
   },
 ];
 
