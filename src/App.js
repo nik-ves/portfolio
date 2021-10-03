@@ -11,33 +11,33 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Fragment>
-      <MainNavigation />
+      <Fragment>
+        <MainNavigation />
 
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
 
-        <Route path="/projects" exact>
-          <Projects />
-        </Route>
+          <Route path="/projects" exact>
+            <Projects />
+          </Route>
 
-        <Route path="/projects/:projectId">
-          <ProjectDetail />
-        </Route>
+          <Route path="/projects/:projectId">
+            <ProjectDetail />
+          </Route>
 
-        <Route path="/contact">
-          <Contact />
-        </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
 
-        <Route path="*">
-          <PageNotFound />
-        </Route>
-      </Switch>
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
 
-      <Footer />
-    </Fragment>
+        <Footer />
+      </Fragment>
   );
 }
 

@@ -25,7 +25,7 @@ const PROJECTS = [
         "This project was designed by Jonas Schmedtmann and made by me. Challenge in this project was to make it without the use of JavaScript and to practice animations on elements.",
       text3:
         "Said animations are popping up button, hamburger CSS navigation, hover animations on images, 360° rotating cards.",
-      text4: "Made with HTML and CSS",
+      text4: "Made with HTML and CSS.",
     },
     githubLink: "https://github.com/nik-ves/natours",
     previewLink: "https://nik-ves.github.io/natours/",

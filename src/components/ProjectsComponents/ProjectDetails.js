@@ -5,8 +5,8 @@ import ProjectNotFound from "../pages/ProjectNotFound";
 
 import classes from "./ProjectDetails.module.css";
 import Container from "../UI/Container";
+import Backdrop from "../UI/Backdrop";
 import PROJECTS from "../../data/CombinedProjects";
-
 
 const ProjectDetails = () => {
   const [projects, setProjects] = useState(PROJECTS);
@@ -21,11 +21,13 @@ const ProjectDetails = () => {
   const project = projects.find((project) => project.id === params.projectId);
 
   if (!project) {
-    return <ProjectNotFound />
+    return <ProjectNotFound />;
   }
 
   return (
     <Container>
+      {isOpen && <Backdrop onClick={openImageHandler} />}
+
       <div className={classes.centered}>
         <div className={classes["project-image-box"]}>
           <img src={project.imgPath} alt="test" onClick={openImageHandler} />
