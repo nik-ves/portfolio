@@ -110,6 +110,21 @@
   color: #DC843A;
 }
 
+.socials {
+  display: flex;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .logo-box a {
+    font-size: 3rem;
+  }
+  .nav ul {
+    font-size: 1.4rem;
+  }
+  
+}
+
 @media only screen and (max-width: 550px) {
   .nav {
     display: none;
@@ -119,14 +134,5 @@
   }
   .logo-box a {
     font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .logo-box a {
-    font-size: 3rem;
-  }
-  .nav ul {
-    font-size: 1.4rem;
   }
 }

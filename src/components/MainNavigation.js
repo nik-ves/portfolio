@@ -60,7 +60,7 @@ const MainNavigation = () => {
           <ul className={classes['hamburger-socials']}>
             <li>
               <a
-                className={classes.test}
+                className={classes.socials}
                 href="https://github.com/nik-ves"
                 target="_blank"
               >
@@ -69,7 +69,7 @@ const MainNavigation = () => {
             </li>
             <li>
               <a
-                className={classes.test}
+                className={classes.socials}
                 href="https://www.instagram.com/dzonigram/"
                 target="_blank"
               >
@@ -78,7 +78,7 @@ const MainNavigation = () => {
             </li>
             <li>
               <a
-                className={classes.test}
+                className={classes.socials}
                 href="https://www.linkedin.com/in/nikves/"
                 target="_blank"
               >
@@ -129,29 +129,29 @@ const MainNavigation = () => {
               </li>
               <li>
                 <a
-                  className={classes.test}
+                  className={classes.socials}
                   href="https://github.com/nik-ves"
                   target="_blank"
                 >
-                  <FiGithub size={22} className={classes.socials} />
+                  <FiGithub className={classes.socials} />
                 </a>
               </li>
               <li>
                 <a
-                  className={classes.test}
+                  className={classes.socials}
                   href="https://www.instagram.com/dzonigram/"
                   target="_blank"
                 >
-                  <FiInstagram size={22} className={classes.socials} />
+                  <FiInstagram className={classes.socials} />
                 </a>
               </li>
               <li>
                 <a
-                  className={classes.test}
+                  className={classes.socials}
                   href="https://www.linkedin.com/in/nikves/"
                   target="_blank"
                 >
-                  <FiLinkedin size={22} className={classes.socials} />
+                  <FiLinkedin className={classes.socials} />
                 </a>
               </li>
             </ul>
