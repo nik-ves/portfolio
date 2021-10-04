@@ -1,8 +1,14 @@
 import useInput from "../../hooks/use-input";
+import emailjs from "emailjs-com";
+import { useState, useRef } from "react";
 
 import classes from "./Form.module.css";
 
 const Form = () => {
+  const form = useRef();
+
+  const [successMessage, setSuccessMessage] = useState(false);
+
   const {
     value: enteredName,
     isValid: nameIsValid,
@@ -19,7 +25,7 @@ const Form = () => {
     valueChangeHandler: emailChangeHandler,
     valueBlurHandler: emailBlurHandler,
     resetValue: resetEmailInput,
-  } = useInput((value) => value.includes('@'));
+  } = useInput((value) => value.includes("@"));
 
   const {
     value: enteredMessage,
@@ -39,19 +45,43 @@ const Form = () => {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
+    emailjs
+      .sendForm(
+        "service_jfc5w5c",
+        "template_vzw121b",
+        form.current,
+        "user_AtEUJjI412jCSTvVqTdgQ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    
+
     resetNameInput();
     resetEmailInput();
     resetMessageInput();
+
+    setSuccessMessage(true);
   };
+
+  setTimeout(() => {
+    setSuccessMessage(false);
+  }, 5000)
 
   return (
     <div className={classes.wrapper}>
-      <form onSubmit={formSubmissionHandler} className={classes.form} method="POST">
+      <form ref={form} onSubmit={formSubmissionHandler} className={classes.form}>
         <div className={classes["form-control"]}>
           <div className={classes["form-control"]}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
+              name="visitor_name"
               id="name"
               onChange={nameChangeHandler}
               onBlur={nameBlurHandler}
@@ -68,6 +98,7 @@ const Form = () => {
             <label htmlFor="email">Email</label>
             <input
               type="email"
+              name="visitor_email"
               id="email"
               onChange={emailChangeHandler}
               onBlur={emailBlurHandler}
@@ -84,6 +115,7 @@ const Form = () => {
             <label htmlFor="message">Your message</label>
             <textarea
               id="message"
+              name="visitor_message"
               onChange={messageChangeHandler}
               onBlur={messageBlurHandler}
               value={enteredMessage}
@@ -94,10 +126,13 @@ const Form = () => {
               </p>
             )}
           </div>
+        </div>
 
-          <div className={classes["form-actions"]}>
-            <button disabled={!formIsValid}>Submit</button>
-          </div>
+        <div className={classes["form-actions"]}>
+          <button type="submit" disabled={!formIsValid}>
+            Submit
+          </button>
+          {successMessage && <p className={classes['success-text']}>Your message has been sent!</p>}
         </div>
       </form>
 
