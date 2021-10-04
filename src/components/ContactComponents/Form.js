@@ -60,7 +60,6 @@ const Form = () => {
           console.log(error.text);
         }
       );
-    
 
     resetNameInput();
     resetEmailInput();

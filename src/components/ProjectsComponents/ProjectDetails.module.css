@@ -61,14 +61,14 @@
 .project-info-description {
   color: grey;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-  line-height: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .project-info-links {
   color: grey;
   margin-top: 2rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   font-size: 1.8rem;
 }
 
