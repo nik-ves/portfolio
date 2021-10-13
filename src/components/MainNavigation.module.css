@@ -60,12 +60,6 @@
   border-bottom: 3px solid #DC843A;
 }
 
-.hamburger {
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
 .hamburger-menu {
   padding-top: 2rem;
   display: flex;

@@ -57,12 +57,13 @@ const MainNavigation = () => {
           <li>
             <span className={classes["line-horizontal"]}></span>
           </li>
-          <ul className={classes['hamburger-socials']}>
+          <ul className={classes["hamburger-socials"]}>
             <li>
               <a
                 className={classes.socials}
                 href="https://github.com/nik-ves"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FiGithub size={22} className={classes.socials} />
               </a>
@@ -72,6 +73,7 @@ const MainNavigation = () => {
                 className={classes.socials}
                 href="https://www.instagram.com/dzonigram/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FiInstagram size={22} className={classes.socials} />
               </a>
@@ -81,6 +83,7 @@ const MainNavigation = () => {
                 className={classes.socials}
                 href="https://www.linkedin.com/in/nikves/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FiLinkedin size={22} className={classes.socials} />
               </a>
@@ -91,6 +94,14 @@ const MainNavigation = () => {
     );
   }
 
+  let hamburgerClasses;
+
+  if (showMenu) {
+    hamburgerClasses = "hamburger-menu-fixed";
+  } else {
+    hamburgerClasses = "hamburger-menu";
+  }
+
   return (
     <header className={classes.header}>
       <Container>
@@ -99,13 +110,13 @@ const MainNavigation = () => {
             <Link to="/">nikves</Link>
           </div>
 
-          <a href="#" className={classes.hamburger}>
+          <div className={hamburgerClasses}>
             <GiHamburgerMenu
               className={classes.icon}
               size={24}
               onClick={showMenuHandler}
             />
-          </a>
+          </div>
 
           <nav id="nav" className={classes.nav}>
             <ul>
@@ -132,6 +143,7 @@ const MainNavigation = () => {
                   className={classes.socials}
                   href="https://github.com/nik-ves"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FiGithub className={classes.socials} />
                 </a>
@@ -141,6 +153,7 @@ const MainNavigation = () => {
                   className={classes.socials}
                   href="https://www.instagram.com/dzonigram/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FiInstagram className={classes.socials} />
                 </a>
@@ -150,6 +163,7 @@ const MainNavigation = () => {
                   className={classes.socials}
                   href="https://www.linkedin.com/in/nikves/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FiLinkedin className={classes.socials} />
                 </a>

@@ -28,7 +28,7 @@ const HomeText = () => {
 
         <p className={classes.text}>
           You can find my full projects list{" "}
-          <a href={links.github} target="_blank">
+          <a href={links.github} target="_blank" rel="noreferrer">
             here
           </a>
           .
@@ -43,10 +43,23 @@ const HomeText = () => {
         <hr className={classes["horizontal-line"]} />
 
         <p className={classes.text}>
-          Find me on <a href={links.github}>GitHub</a>, {" "}
-          <a href={links.instagram}>Instagram</a>, {" "}
-          <a href={links.linkedin}>LinkedIn</a>, or mail me at {" "}
-          <a href={links.mail}>nik-ves@hotmail.com</a>.
+          Find me on{" "}
+          <a href={links.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          ,{" "}
+          <a href={links.instagram} target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          ,{" "}
+          <a href={links.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          , or mail me at{" "}
+          <a href={links.mail} target="_blank" rel="noreferrer">
+            nik-ves@hotmail.com
+          </a>
+          .
         </p>
         <br />
 

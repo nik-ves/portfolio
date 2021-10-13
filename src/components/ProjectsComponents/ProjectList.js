@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { useState } from "react";
 
 import ProjectCard from "./ProjectCard";
@@ -9,9 +8,9 @@ import JAVASCRIPT_PROJECTS from "../../data/JavaScriptProjects";
 import REACT_PROJECTS from "../../data/ReactProjects";
 
 const ProjectList = () => {
-  const [lpProjects, setLpProjects] = useState(LANDING_PAGE_PROJECTS);
-  const [jsProjects, setJsProjects] = useState(JAVASCRIPT_PROJECTS);
-  const [reactProjects, setReactProjects] = useState(REACT_PROJECTS);
+  const [lpProjects] = useState(LANDING_PAGE_PROJECTS);
+  const [jsProjects] = useState(JAVASCRIPT_PROJECTS);
+  const [reactProjects] = useState(REACT_PROJECTS);
 
   return (
     <div className={classes.wrapper}>
@@ -21,7 +20,7 @@ const ProjectList = () => {
         Some of the projects that i'm proud of. <br /> All of the project cards
         will take you to their GitHub repository which includes live preview of
         the project. If you want to see full list of my projects go to my{" "}
-        <a href="https://github.com/nik-ves" target="_blank">
+        <a href="https://github.com/nik-ves" target="_blank" rel="noreferrer">
           GitHub
         </a>{" "}
         page.

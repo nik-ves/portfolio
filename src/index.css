@@ -52,3 +52,18 @@ a {
   z-index: 290;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hamburger-menu-fixed {
+  z-index: 10000;
+  position: fixed;
+  top: 1;
+  right: 0;
+  margin: 2rem;
+}

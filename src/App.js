@@ -8,12 +8,14 @@ import Contact from "./components/pages/Contact";
 import ProjectDetail from "./components/pages/ProjectDetail";
 import PageNotFound from "./components/pages/PageNotFound";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/UI/ScrollToTop";
 
 function App() {
   return (
       <Fragment>
         <MainNavigation />
 
+        <ScrollToTop />
         <Switch>
           <Route path="/" exact>
             <Home />

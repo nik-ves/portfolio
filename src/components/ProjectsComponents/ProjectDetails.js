@@ -10,7 +10,7 @@ import Backdrop from "../UI/Backdrop";
 import PROJECTS from "../../data/CombinedProjects";
 
 const ProjectDetails = () => {
-  const [projects, setProjects] = useState(PROJECTS);
+  const [projects] = useState(PROJECTS);
   const [isOpen, setIsOpen] = useState(false);
 
   const openImageHandler = () => {
@@ -36,14 +36,14 @@ const ProjectDetails = () => {
 
       <div className={classes.centered}>
         <div className={classes["project-image-box"]}>
-          <img src={project.imgPath} alt="test" onClick={openImageHandler} />
+          <img src={project.imgPath} alt="img" onClick={openImageHandler} />
         </div>
         {isOpen && (
           <div
             className={classes["project-image-enlarger"]}
             onClick={openImageHandler}
           >
-            <img src={project.imgPath} onClick={openImageHandler} />
+            <img src={project.imgPath} alt="img" onClick={openImageHandler} />
           </div>
         )}
 
@@ -74,11 +74,11 @@ const ProjectDetails = () => {
 
             <p className={classes["project-info-links"]}>
               Click{" "}
-              <a href={project.previewLink} target="_blank">
+              <a href={project.previewLink} target="_blank" rel="noreferrer">
                 here
               </a>{" "}
               to see live preview of the project or{" "}
-              <a href={project.githubLink} target="_blank">
+              <a href={project.githubLink} target="_blank" rel="noreferrer">
                 here
               </a>{" "}
               to see project code on GitHub.

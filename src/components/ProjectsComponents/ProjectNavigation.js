@@ -4,24 +4,23 @@ import { Link } from "react-router-dom";
 import classes from "./ProjectNavigation.module.css";
 
 const ProjectNavigation = (props) => {
-  const projectList = props.projects; // 
+  const projectList = props.projects; // array of objects
   let pageNumber = props.currentProject; // current index of selected object
   
   console.log(projectList[pageNumber].id)
+  console.log(pageNumber)
 
-  // console.log(projects[projectIndex].id)
+  const goForward = () => {
+    pageNumber++; // incrementing index
+    console.log(pageNumber);
 
-  // const goForward = () => {
-  //   pageNumber++; // incrementing index
-  //   console.log(pageNumber);
+    if (pageNumber >= projectList.length) {
+      pageNumber = 0;
+    }
 
-  //   if (pageNumber >= projects.length) {
-  //     pageNumber = 0;
-  //   }
-
-  //   let link = `/projects/${projects[pageNumber].id}`;
-  //   return link;
-  // };
+    let link = `/projects/${projectList[pageNumber].id}`;
+    return link;
+  };
 
   // const goBackwards = () => {
   //   pageNumber--;
@@ -46,14 +45,14 @@ const ProjectNavigation = (props) => {
         <FiArrowLeft size={30} />
       </Link>
 
-      {/* <button onClick={goForward}>POVECAJ</button>
-      <button onClick={goBackwards}>SMANJI</button> */}
+      {/* <button onClick={goForward}>POVECAJ</button> */}
+      {/* <button onClick={goBackwards}>SMANJI</button> */}
 
       <Link to="/projects">
         <p className={classes["ovojetest"]}>All Projects</p>
       </Link>
 
-      <Link to="/">
+      <Link to={goForward}>
         <FiArrowRight size={30} />
       </Link>
     </div>
