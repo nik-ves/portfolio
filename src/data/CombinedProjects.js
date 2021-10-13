@@ -212,12 +212,12 @@ const PROJECTS = [
     name: "Todo App",
     description: {
       text1: "Todo App",
-      text2: "Currently work in progress!",
+      text2: "Classic todo application. Includes checkbox and remove button for completed ones.",
       text3: "Made with React.js.",
     },
     githubLink: "https://github.com/nik-ves/todo-app",
-    previewLink: "https://nik-ves.github.io/natours/",
-    imgPath: "/images/omnifood-project.png",
+    previewLink: "https://todo-nik-ves.netlify.app",
+    imgPath: "/images/todo.png",
   },
 ];
 
