@@ -5,6 +5,7 @@ import ProjectNotFound from "../pages/ProjectNotFound";
 
 import classes from "./ProjectDetails.module.css";
 import Container from "../UI/Container";
+import ProjectNavigation from "../ProjectNavigation";
 import Backdrop from "../UI/Backdrop";
 import PROJECTS from "../../data/CombinedProjects";
 
@@ -26,6 +27,7 @@ const ProjectDetails = () => {
 
   return (
     <Container>
+      {/* <ProjectNavigation /> */}
       {isOpen && <Backdrop onClick={openImageHandler} />}
 
       <div className={classes.centered}>

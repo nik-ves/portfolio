@@ -1,0 +1,34 @@
+.project-navigation-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.project-navigation-content a {
+  display: flex;
+  color: #DC843A;
+  margin: 0 5rem;
+  transition: all 0.2s;
+}
+
+.project-navigation-content a:hover {
+  color: #fff;
+}
+
+.ovojetest {
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .ovojetest {
+    display: block;
+  }
+  .project-navigation-content {
+    font-size: 1.5rem;
+  }
+  .project-navigation-content a {
+    margin: 0 2rem;
+  }
+}
