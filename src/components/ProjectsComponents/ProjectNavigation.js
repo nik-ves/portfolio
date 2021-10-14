@@ -11,11 +11,11 @@ const ProjectNavigation = (props) => {
 
     pageNumber--;
 
-    if ((pageNumber = 0)) {
-      pageNumber = projectList.length;
+    if (pageNumber <= 0) {
+      pageNumber = 0;
     }
 
-    console.log(pageNumber);
+    // console.log(pageNumber);
 
     let link = `/projects/${projectList[pageNumber].id}`;
     return link;
@@ -29,7 +29,8 @@ const ProjectNavigation = (props) => {
     if (pageNumber >= projectList.length) {
       pageNumber = 0;
     }
-    console.log(pageNumber);
+
+    // console.log(pageNumber);
 
     let link = `/projects/${projectList[pageNumber].id}`;
     return link;
@@ -41,8 +42,11 @@ const ProjectNavigation = (props) => {
         <FiArrowLeft size={30} />
       </Link>
 
+      {/* <button>POVECAJ</button> */}
+      {/* <button onClick={goBackwards}>SMANJI</button> */}
+
       <Link to="/projects">
-        <p className={classes["ovojetest"]}>All Projects</p>
+        <p className={classes["project-navigation-toggle"]}>All Projects</p>
       </Link>
 
       <Link to={goForward}>
