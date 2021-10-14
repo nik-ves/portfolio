@@ -17,6 +17,10 @@
   color: #fff;
 }
 
+.project-navigation-content a:focus {
+  color: #DC843A;
+}
+
 .ovojetest {
   display: none;
 }

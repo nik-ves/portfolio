@@ -5,48 +5,41 @@ import classes from "./ProjectNavigation.module.css";
 
 const ProjectNavigation = (props) => {
   const projectList = props.projects; // array of objects
-  let pageNumber = props.currentProject; // current index of selected object
-  
-  console.log(projectList[pageNumber].id)
-  console.log(pageNumber)
 
-  const goForward = () => {
-    pageNumber++; // incrementing index
-    console.log(pageNumber);
+  const goBackwards = () => {
+    let pageNumber = props.currentProject; // current index of selected object
 
-    if (pageNumber >= projectList.length) {
-      pageNumber = 0;
+    pageNumber--;
+
+    if ((pageNumber = 0)) {
+      pageNumber = projectList.length;
     }
+
+    console.log(pageNumber);
 
     let link = `/projects/${projectList[pageNumber].id}`;
     return link;
   };
 
-  // const goBackwards = () => {
-  //   pageNumber--;
-  //   // console.log(pageNumber);
+  const goForward = () => {
+    let pageNumber = props.currentProject; // current index of selected object
 
-  //   // if (pageNumber = 0) {
-  //   //   return;
-  //   // }
+    pageNumber++;
 
-  //   // if (pageNumber < projectList.length) {
-  //   //   setPageNumber(0);
-  //   // } else {
-  //   //   let link = `/projects/${projectList[pageNumber].id}`;
-  //   //   console.log(pageNumber);
-  //   //   return link;
-  //   // }
-  // };
+    if (pageNumber >= projectList.length) {
+      pageNumber = 0;
+    }
+    console.log(pageNumber);
+
+    let link = `/projects/${projectList[pageNumber].id}`;
+    return link;
+  };
 
   return (
     <div className={classes["project-navigation-content"]}>
-      <Link to="/">
+      <Link to={goBackwards}>
         <FiArrowLeft size={30} />
       </Link>
-
-      {/* <button onClick={goForward}>POVECAJ</button> */}
-      {/* <button onClick={goBackwards}>SMANJI</button> */}
 
       <Link to="/projects">
         <p className={classes["ovojetest"]}>All Projects</p>
