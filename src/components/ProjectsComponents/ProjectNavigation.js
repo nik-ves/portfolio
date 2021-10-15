@@ -8,14 +8,11 @@ const ProjectNavigation = (props) => {
 
   const goBackwards = () => {
     let pageNumber = props.currentProject; // current index of selected object
-
     pageNumber--;
 
     if (pageNumber <= 0) {
-      pageNumber = 0;
+      pageNumber = projectList.length - 1;
     }
-
-    // console.log(pageNumber);
 
     let link = `/projects/${projectList[pageNumber].id}`;
     return link;
@@ -23,14 +20,11 @@ const ProjectNavigation = (props) => {
 
   const goForward = () => {
     let pageNumber = props.currentProject; // current index of selected object
-
     pageNumber++;
 
     if (pageNumber >= projectList.length) {
       pageNumber = 0;
     }
-
-    // console.log(pageNumber);
 
     let link = `/projects/${projectList[pageNumber].id}`;
     return link;
@@ -41,9 +35,6 @@ const ProjectNavigation = (props) => {
       <Link to={goBackwards}>
         <FiArrowLeft size={30} />
       </Link>
-
-      {/* <button>POVECAJ</button> */}
-      {/* <button onClick={goBackwards}>SMANJI</button> */}
 
       <Link to="/projects">
         <p className={classes["project-navigation-toggle"]}>All Projects</p>
