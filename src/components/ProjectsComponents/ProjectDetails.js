@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router";
 
-import ProjectNotFound from "../pages/ProjectNotFound";
-
 import classes from "./ProjectDetails.module.css";
+
+import ProjectNotFound from "../pages/ProjectNotFound";
 import Container from "../UI/Container";
 import ProjectNavigation from "./ProjectNavigation";
 import Backdrop from "../UI/Backdrop";

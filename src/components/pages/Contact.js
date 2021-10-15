@@ -1,5 +1,5 @@
 import Container from "../UI/Container";
-import Form from "../ContactComponents/Form";
+import Form from "../contactComponents/Form";
 
 const Contact = () => {
   return (

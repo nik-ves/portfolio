@@ -1,5 +1,5 @@
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 import classes from "./ProjectNavigation.module.css";
 

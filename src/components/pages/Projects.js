@@ -1,5 +1,5 @@
 import Container from "../UI/Container";
-import ProjectList from "../ProjectsComponents/ProjectList";
+import ProjectList from "../projectsComponents/ProjectList";
 
 const Projects = () => {
   return (

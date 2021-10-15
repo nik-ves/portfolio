@@ -1,8 +1,9 @@
-import useInput from "../../hooks/use-input";
-import emailjs from "emailjs-com";
 import { useState, useRef } from "react";
 
 import classes from "./Form.module.css";
+
+import useInput from "../../hooks/use-input";
+import emailjs from "emailjs-com";
 
 const Form = () => {
   const form = useRef();

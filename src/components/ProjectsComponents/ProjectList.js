@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import ProjectCard from "./ProjectCard";
 import classes from "./ProjectList.module.css";
+import ProjectCard from "./ProjectCard";
 
 import LANDING_PAGE_PROJECTS from "../../data/LandingPageProjects";
 import JAVASCRIPT_PROJECTS from "../../data/JavaScriptProjects";
