@@ -53,12 +53,8 @@ const Form = () => {
         "user_AtEUJjI412jCSTvVqTdgQ"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        (result) => {},
+        (error) => {}
       );
 
     resetNameInput();
@@ -70,11 +66,15 @@ const Form = () => {
 
   setTimeout(() => {
     setSuccessMessage(false);
-  }, 5000)
+  }, 10000);
 
   return (
     <div className={classes.wrapper}>
-      <form ref={form} onSubmit={formSubmissionHandler} className={classes.form}>
+      <form
+        ref={form}
+        onSubmit={formSubmissionHandler}
+        className={classes.form}
+      >
         <div className={classes["form-control"]}>
           <div className={classes["form-control"]}>
             <label htmlFor="name">Name</label>
@@ -131,7 +131,9 @@ const Form = () => {
           <button type="submit" disabled={!formIsValid}>
             Submit
           </button>
-          {successMessage && <p className={classes['success-text']}>Your message has been sent!</p>}
+          {successMessage && (
+            <p className={classes["success-text"]}>Your message has been sent!</p>
+          )}
         </div>
       </form>
 

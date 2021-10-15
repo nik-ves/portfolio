@@ -5,7 +5,7 @@
 .logo-box a {
   font-size: 4rem;
   text-decoration: none;
-  color: #DC843A;
+  color: #dc843a;
   line-height: 6rem;
 }
 
@@ -29,12 +29,11 @@
 
 .nav li {
   margin-left: 2rem;
-  
 }
 
 .nav a {
   text-decoration: none;
-  color: #DC843A;
+  color: #dc843a;
   transition: all 0.2s;
   border-bottom: 3px solid transparent;
 }
@@ -57,7 +56,7 @@
 .line-horizontal {
   display: block;
   width: 100px;
-  border-bottom: 3px solid #DC843A;
+  border-bottom: 3px solid #dc843a;
 }
 
 .hamburger-menu {
@@ -79,7 +78,9 @@
     rgba(43, 43, 43, 1) 0%,
     rgba(26, 30, 34, 1) 100%
   );
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  animation: fromTop 0.5s ease-in-out;
+  
 }
 
 .hamburger-menu a {
@@ -100,13 +101,22 @@
 
 .icon {
   display: none;
-  z-index: 10;
-  color: #DC843A;
+  z-index: 1000;
+  color: #dc843a;
 }
 
 .socials {
   display: flex;
   font-size: 1.8rem;
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-25rem);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 @media only screen and (max-width: 750px) {

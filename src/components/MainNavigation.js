@@ -97,9 +97,9 @@ const MainNavigation = () => {
   let hamburgerClasses;
 
   if (showMenu) {
-    hamburgerClasses = "hamburger-menu-fixed";
+    hamburgerClasses = "hamburger-menu-icon-fixed";
   } else {
-    hamburgerClasses = "hamburger-menu";
+    hamburgerClasses = "hamburger-menu-icon";
   }
 
   return (

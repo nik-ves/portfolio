@@ -10,7 +10,7 @@ const ProjectNavigation = (props) => {
     let pageNumber = props.currentProject; // current index of selected object
     pageNumber--;
 
-    if (pageNumber <= 0) {
+    if (pageNumber < 0) {
       pageNumber = projectList.length - 1;
     }
 
