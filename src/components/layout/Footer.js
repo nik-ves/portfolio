@@ -3,11 +3,11 @@ import Container from "../UI/Container";
 
 const Footer = () => {
   return (
-    <header className={classes.header}>
+    <footer className={classes.footer}>
       <Container>
         <p>2021 © Nikola Veselinović</p>
       </Container>
-    </header>
+    </footer>
   );
 };
 

@@ -56,21 +56,13 @@ const ProjectDetails = () => {
           </div>
 
           <div className={classes["project-text-box"]}>
-            <p className={classes["project-info-description"]}>
-              {project.description.text1}
-            </p>
-
-            <p className={classes["project-info-description"]}>
-              {project.description.text2}
-            </p>
-
-            <p className={classes["project-info-description"]}>
-              {project.description.text3}
-            </p>
-
-            <p className={classes["project-info-description"]}>
-              {project.description.text4}
-            </p>
+            {Object.keys(project.description).map((index) => {
+              return (
+                <p className={classes["project-info-description"]}>
+                  {project.description[index]}
+                </p>
+              );
+            })}
 
             <p className={classes["project-info-links"]}>
               Click{" "}
