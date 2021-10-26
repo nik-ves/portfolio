@@ -14,7 +14,7 @@ const ProjectNavigation = (props) => {
       pageNumber = projectList.length - 1;
     }
 
-    let link = `/projects/${projectList[pageNumber].id}`;
+    let link = `/projects/${projectList[pageNumber].name}`;
     return link;
   };
 
@@ -26,7 +26,7 @@ const ProjectNavigation = (props) => {
       pageNumber = 0;
     }
 
-    let link = `/projects/${projectList[pageNumber].id}`;
+    let link = `/projects/${projectList[pageNumber].name}`;
     return link;
   };
 

@@ -1,8 +1,11 @@
 const PROJECTS = [
   {
-    id: "omnifood",
-    name: "Omnifood Landing Page",
-    description: {
+    id: 1,
+    name: "omnifood",
+    type: "Landing page",
+    shortDescription:
+      "Omnifood is a company which makes and delivers healthy food to your doorstep.",
+    longDescription: {
       text1:
         "Omnifood is a fictional company which makes and delivers healthy food to your doorstep.",
       text2:
@@ -16,9 +19,12 @@ const PROJECTS = [
     imgPath: "/images/omnifood-project.png",
   },
   {
-    id: "natours",
-    name: "Natours Landing Page",
-    description: {
+    id: 2,
+    name: "natours",
+    type: "Landing page",
+    shortDescription:
+      "Want to explore the wilds but don't know how? Then Natours is perfect for you!",
+    longDescription: {
       text1:
         "Want to explore the wilds but don't know how? Then Natours is perfect for you!",
       text2:
@@ -32,9 +38,12 @@ const PROJECTS = [
     imgPath: "/images/natours-project.png",
   },
   {
-    id: "trillo",
-    name: "Trillo Landing Page",
-    description: {
+    id: 3,
+    name: "trillo",
+    type: "Landing page",
+    shortDescription:
+      "If you need help booking a hotel or renting a car, Trillo is made for you.",
+    longDescription: {
       text1:
         "If you need help booking a hotel or renting a car, Trillo is made for you.",
       text2:
@@ -46,9 +55,12 @@ const PROJECTS = [
     imgPath: "/images/trillo-project.png",
   },
   {
-    id: "nexter",
-    name: "Nexter Landing Page",
-    description: {
+    id: 4,
+    name: "nexter",
+    type: "Landing page",
+    shortDescription:
+      "Finding a new house is hard and Nexter is here to help you out.",
+    longDescription: {
       text1: "Finding a new house is hard and Nexter is here to help you out.",
       text2:
         "This project was designed by Jonas Schmedtmann and made by me. Goal of projects like this was to practice SCSS and CSS Grid property. After this project i haven't used CSS Grid much, just liked CSS Flex more.",
@@ -59,9 +71,12 @@ const PROJECTS = [
     imgPath: "/images/nexter-project.png",
   },
   {
-    id: "web-challenges",
-    name: "Web Challenges",
-    description: {
+    id: 5,
+    name: "web-challenges",
+    type: "Landing page",
+    shortDescription:
+      "Solutions from landing page challenge websites such as Frontend-Mentor and Codewell.",
+    longDescription: {
       text1:
         "Finished landing page solutions from challenge websites, such as Frontend Mentor and Codewell.",
       text2:
@@ -74,9 +89,12 @@ const PROJECTS = [
     imgPath: "/images/web-challenges.png",
   },
   {
-    id: "monster-killer-game",
-    name: "Monster Killer Game",
-    description: {
+    id: 6,
+    name: "monster-killer-game",
+    type: "Javascript",
+    shortDescription:
+      "Small browser game with a goal of killing the monster before it kills you.",
+    longDescription: {
       text1:
         "Small browser game with a goal of killing the monster before it kills you.",
       text2:
@@ -88,9 +106,12 @@ const PROJECTS = [
     imgPath: "/images/monster-killer-project.png",
   },
   {
-    id: "rock-paper-scissors",
-    name: "Rock Paper Scissors",
-    description: {
+    id: 7,
+    name: "rock-paper-scissors",
+    type: "Javascript",
+    shortDescription:
+      "Basic rock, paper, scissors game. Result shown in the console.",
+    longDescription: {
       text1:
         "Rock, Paper, Scissors game which everyone knows. Currently this vesion is only played in the console. Goal of this project was to practice functionality and logic.",
       text2:
@@ -102,9 +123,12 @@ const PROJECTS = [
     imgPath: "/images/rock-paper-scissors-project.png",
   },
   {
-    id: "calculator",
-    name: "Calculator",
-    description: {
+    id: 8,
+    name: "calculator",
+    type: "Javascript",
+    shortDescription:
+      "A simple calculator with the basic arithmetic operations.",
+    longDescription: {
       text1: "A simple calculator with the basic arithmetic operations.",
       text2:
         "My first project built with JavaScript. As this was the first calculator that I ever made, i'm gonna come back and upgrade it.",
@@ -115,9 +139,11 @@ const PROJECTS = [
     imgPath: "/images/calculator-project.png",
   },
   {
-    id: "github-profile-search",
-    name: "Github Profile Search",
-    description: {
+    id: 9,
+    name: "github-profile-search",
+    type: "Javascript",
+    shortDescription: "See your GitHub profile simplified.",
+    longDescription: {
       text1: "Enter your GitHub username and see your profile simplified.",
       text2:
         "Got the project idea from Twitter and tried to make it myself. Never before have I worked with fetch but managed to make it. Includes a back button when you're finished with the serach and also the ligth and dark mode switcher. Currently this project is limited to return only 30 projects on search.",
@@ -128,9 +154,11 @@ const PROJECTS = [
     imgPath: "/images/github-profile-project.png",
   },
   {
-    id: "pig-game",
-    name: "Pig Game",
-    description: {
+    id: 10,
+    name: "pig-game",
+    type: "Javascript",
+    shortDescription: "Whoever hits 100 score first is a winner!",
+    longDescription: {
       text1: "Pig game made with vanilla JavaScript.",
       text2:
         "First project with styling and scripting. This is a project from course made by Jonas Schmedtmann on Udemy. Goal of this project was to practice manipulation of DOM.",
@@ -143,9 +171,12 @@ const PROJECTS = [
     imgPath: "/images/pig-game-project.png",
   },
   {
-    id: "guess-my-number",
-    name: "Guess My Number",
-    description: {
+    id: 11,
+    name: "guess-my-number",
+    type: "Javascript",
+    shortDescription:
+      "Guess a number game. Secret number is logged in the console for an easy win.",
+    longDescription: {
       text1: "Game of guessing a hidden number with limited tries.",
       text2:
         "Goal of the game is to guess the hidden number before you run out of tries. Hidden number has a value between 1 and 20 and the earliest guess brings the highest score. If you want an easy win, hidden number is logged into the console.",
@@ -156,9 +187,12 @@ const PROJECTS = [
     imgPath: "/images/guess-my-number-project.png",
   },
   {
-    id: "expense-tracker",
-    name: "Expense Tracker App",
-    description: {
+    id: 12,
+    name: "expense-tracker",
+    type: "React",
+    shortDescription:
+      "Tracker expense app made with React.js. Includes a year filter.",
+    longDescription: {
       text1: "Tracker expense app",
       text2:
         "This would be my first React.js project made and is one of the project from Udemy course designed by Maximilian Schwarzmüller. Includes adding your expenses by a year, which you can filter through. Also includes a graph which show you your expenses by months.",
@@ -169,9 +203,12 @@ const PROJECTS = [
     imgPath: "/images/expense-tracker-project.png",
   },
   {
-    id: "user-listing",
-    name: "User Listing App",
-    description: {
+    id: 13,
+    name: "user-listing",
+    type: "React",
+    shortDescription:
+      "Basic users listing app made with React.js with some form validation.",
+    longDescription: {
       text1: "App for listing users.",
       text2:
         "Basic app which enables you to list users with this form. Submitting users name and age will add them bellow for you to see. Before you can submit you have to go through a small form validation which does not allow submitting empty values.",
@@ -182,9 +219,12 @@ const PROJECTS = [
     imgPath: "/images/user-listing-project.png",
   },
   {
-    id: "food-order",
-    name: "Food Order App",
-    description: {
+    id: 14,
+    name: "food-order",
+    type: "React",
+    shortDescription:
+      "Food ordering app which is connected with Firebase database. Includes a simple form validation.",
+    longDescription: {
       text1: "Food ordering app",
       text2:
         "Currently my most complex project built, also one of the projects from Udemy course designed by Maximilian Schwarzmüller. This app is connected to a firebase database. After you select your food and amount, you can submit the data from the cart to the database.",
@@ -195,9 +235,12 @@ const PROJECTS = [
     imgPath: "/images/food-order-project.png",
   },
   {
-    id: "form-validator",
-    name: "Form Validator",
-    description: {
+    id: 15,
+    name: "form-validator",
+    type: "React",
+    shortDescription:
+      "Validate user input with this. After submiting, user information will be shown in the console.",
+    longDescription: {
       text1: "Form validator.",
       text2:
         "Goal of this app was to practice validation of the form as the name suggests. Form is made of four input fields. After you submit your data, if the form allows you, you can see your submited data in the console.",
@@ -208,11 +251,14 @@ const PROJECTS = [
     imgPath: "/images/form-validation-project.png",
   },
   {
-    id: "todo-app",
-    name: "Todo App",
-    description: {
+    id: 16,
+    name: "todo-app",
+    type: "React",
+    shortDescription: "Basic Todo app.",
+    longDescription: {
       text1: "Todo App",
-      text2: "Classic todo application. Includes checkbox and remove button for completed ones.",
+      text2:
+        "Classic todo application. Includes checkbox and remove button for completed ones.",
       text3: "Made with React.js.",
     },
     githubLink: "https://github.com/nik-ves/todo-app",

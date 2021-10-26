@@ -2,15 +2,10 @@ import { useState } from "react";
 
 import classes from "./ProjectList.module.css";
 import ProjectCard from "./ProjectCard";
-
-import LANDING_PAGE_PROJECTS from "../../data/LandingPageProjects";
-import JAVASCRIPT_PROJECTS from "../../data/JavaScriptProjects";
-import REACT_PROJECTS from "../../data/ReactProjects";
+import PROJECTS from "../../data/Projects";
 
 const ProjectList = () => {
-  const [lpProjects] = useState(LANDING_PAGE_PROJECTS);
-  const [jsProjects] = useState(JAVASCRIPT_PROJECTS);
-  const [reactProjects] = useState(REACT_PROJECTS);
+  const [projects] = useState(PROJECTS);
 
   return (
     <div className={classes.wrapper}>
@@ -28,15 +23,18 @@ const ProjectList = () => {
 
       <div>
         <h4>Landing page projects</h4>
+
         <div className={classes.flex}>
-          {lpProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              desc={project.desc}
-              link={project.link}
-            />
-          ))}
+          {projects
+            .filter((project) => project.type === "Landing page")
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                desc={project.shortDescription}
+                link={`/projects/${project.name}`}
+              />
+            ))}
         </div>
       </div>
 
@@ -44,14 +42,16 @@ const ProjectList = () => {
         <h4 className={classes["margin-top"]}>Javascript projects</h4>
 
         <div className={classes.flex}>
-          {jsProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              desc={project.desc}
-              link={project.link}
-            />
-          ))}
+          {projects
+            .filter((project) => project.type === "Javascript")
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                desc={project.shortDescription}
+                link={`/projects/${project.name}`}
+              />
+            ))}
         </div>
       </div>
 
@@ -59,14 +59,16 @@ const ProjectList = () => {
         <h4 className={classes["margin-top"]}>React projects</h4>
 
         <div className={classes.flex}>
-          {reactProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              desc={project.desc}
-              link={project.link}
-            />
-          ))}
+          {projects
+            .filter((project) => project.type === "React")
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                desc={project.shortDescription}
+                link={`/projects/${project.name}`}
+              />
+            ))}
         </div>
       </div>
 

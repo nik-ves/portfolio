@@ -7,7 +7,8 @@ import ProjectNotFound from "../pages/ProjectNotFound";
 import Container from "../UI/Container";
 import ProjectNavigation from "./ProjectNavigation";
 import Backdrop from "../UI/Backdrop";
-import PROJECTS from "../../data/CombinedProjects";
+
+import PROJECTS from "../../data/Projects";
 
 const ProjectDetails = () => {
   const [projects] = useState(PROJECTS);
@@ -19,19 +20,20 @@ const ProjectDetails = () => {
 
   const params = useParams();
 
-  const project = projects.find((project) => project.id === params.projectId);
+  const project = projects.find((project) => project.name === params.projectId);
 
   if (!project) {
     return <ProjectNotFound />;
   }
 
   let pageIndex = projects.findIndex(
-    (element) => element.id === params.projectId
+    (element) => element.name === params.projectId
   );
 
   return (
     <Container>
       <ProjectNavigation projects={projects} currentProject={pageIndex} />
+
       {isOpen && <Backdrop onClick={openImageHandler} />}
 
       <div className={classes.centered}>
@@ -56,10 +58,10 @@ const ProjectDetails = () => {
           </div>
 
           <div className={classes["project-text-box"]}>
-            {Object.keys(project.description).map((index) => {
+            {Object.keys(project.longDescription).map((index) => {
               return (
-                <p className={classes["project-info-description"]}>
-                  {project.description[index]}
+                <p key={index} className={classes["project-info-description"]}>
+                  {project.longDescription[index]}
                 </p>
               );
             })}
