@@ -1,0 +1,11 @@
+.icon {
+  display: none;
+  z-index: 1000;
+  color: #dc843a;
+}
+
+@media only screen and (max-width: 550px) {
+  .icon {
+    display: block;
+  }
+}

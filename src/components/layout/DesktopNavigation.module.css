@@ -1,0 +1,49 @@
+.nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.nav li {
+  margin-left: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #dc843a;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.nav a.active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.line-vertical {
+  display: block;
+  height: 30px;
+  border-right: 1px solid #fff;
+}
+
+.socials {
+  display: flex;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav ul {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav {
+    display: none;
+  }
+}
