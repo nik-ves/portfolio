@@ -3,32 +3,10 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 import classes from "./ProjectNavigation.module.css";
 
+import usePage from "../../hooks/use-page";
+
 const ProjectNavigation = (props) => {
-  const projectList = props.projects; // array of objects
-
-  const goBackwards = () => {
-    let pageNumber = props.currentProject; // current index of selected object
-    pageNumber--;
-
-    if (pageNumber < 0) {
-      pageNumber = projectList.length - 1;
-    }
-
-    let link = `/projects/${projectList[pageNumber].name}`;
-    return link;
-  };
-
-  const goForward = () => {
-    let pageNumber = props.currentProject; // current index of selected object
-    pageNumber++;
-
-    if (pageNumber >= projectList.length) {
-      pageNumber = 0;
-    }
-
-    let link = `/projects/${projectList[pageNumber].name}`;
-    return link;
-  };
+  const { goBackwards, goForwards } = usePage(props.currentProject);
 
   return (
     <div className={classes["project-navigation-content"]}>
@@ -40,7 +18,7 @@ const ProjectNavigation = (props) => {
         <p className={classes["project-navigation-toggle"]}>All Projects</p>
       </Link>
 
-      <Link to={goForward}>
+      <Link to={goForwards}>
         <FiArrowRight size={30} />
       </Link>
     </div>

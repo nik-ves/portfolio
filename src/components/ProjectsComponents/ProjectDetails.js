@@ -19,7 +19,6 @@ const ProjectDetails = () => {
   };
 
   const params = useParams();
-
   const project = projects.find((project) => project.name === params.projectId);
 
   if (!project) {
@@ -29,6 +28,13 @@ const ProjectDetails = () => {
   let pageIndex = projects.findIndex(
     (element) => element.name === params.projectId
   );
+
+  const formatedName = (name) => {
+    return name
+      .split("-")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ");
+  };
 
   return (
     <Container>
@@ -51,7 +57,7 @@ const ProjectDetails = () => {
 
         <div className={classes["project-info"]}>
           <div>
-            <h2>{project.name}</h2>
+            <h2>{formatedName(project.name)}</h2>
             <p className={classes["picture-text"]}>
               Click on the image to see its preview.
             </p>
