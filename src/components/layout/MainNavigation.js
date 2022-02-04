@@ -23,7 +23,7 @@ const MainNavigation = () => {
           <DesktopNavigation />
         </div>
 
-        {showMenu && <MobileNavigation setShowMenu={setShowMenu} />}
+        <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
     </header>
   );
