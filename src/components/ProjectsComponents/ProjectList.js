@@ -72,7 +72,24 @@ const ProjectList = () => {
         </div>
       </div>
 
-      <p className={classes.text}>Last updated: 30.9.2021.</p>
+      <div>
+        <h4 className={classes["margin-top"]}>React Native projects</h4>
+
+        <div className={classes.flex}>
+          {projects
+            .filter((project) => project.type === "React Native")
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                desc={project.shortDescription}
+                link={`/projects/${project.name}`}
+              />
+            ))}
+        </div>
+      </div>
+
+      <p className={classes.text}>Last updated: 06.02.2022.</p>
     </div>
   );
 };

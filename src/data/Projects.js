@@ -267,6 +267,52 @@ const PROJECTS = [
     previewLink: "https://todo-nik-ves.netlify.app",
     imgPath: "/images/todo.png",
   },
+  {
+    id: 17,
+    name: "guess-a-number",
+    type: "React Native",
+    shortDescription: "Help your phone guess your hidden number!",
+    longDescription: {
+      text1: "Guess A Number Game",
+      text2:
+        "Goal of the game is to guide your phone to guess the hidden number you chose at the beginning of the game. Press - for a lower number or + for a greater number. After the computer successfully guesses it, victory screen will show how many rounds your phone needed to guess it!",
+      text3: "Made with React Native.",
+    },
+    githubLink: "https://github.com/nik-ves/mobile-guess-a-number-game",
+    previewLink: "https://github.com/nik-ves/mobile-guess-a-number-game",
+    imgPath: "/images/guess-a-number-mobile.png",
+  },
+  {
+    id: 18,
+    name: "todo-app",
+    type: "React Native",
+    shortDescription: "Simple mobile todo application.",
+    longDescription: {
+      text1: "Todo Application",
+      text2:
+        "Mobile application for your todos. Includes creating and deleting functions.",
+      text3: "Made with React Native.",
+    },
+    githubLink: "https://github.com/nik-ves/mobile-todo-app",
+    previewLink: "https://github.com/nik-ves/mobile-todo-app",
+    imgPath: "/images/todo-mobile.png",
+  },
+  {
+    id: 19,
+    name: "personalized-recipes-app",
+    type: "React Native",
+    shortDescription:
+      "Personalized recipes application fetched from forkify API.",
+    longDescription: {
+      text1: "Personalized Recipes App",
+      text2:
+        "Faculty project in which the goal was to fetch recipes fron an external API, show them to user and provide details for each recipe. Logged in user can chose to favorite the ones he likes. After the inital log in, application will remember user in its memory so user won't have to log in again.",
+      text3: "Made with React Native.",
+    },
+    githubLink: "https://github.com/nik-ves/mobile-app-for-recipes",
+    previewLink: "https://github.com/nik-ves/mobile-app-for-recipes",
+    imgPath: "/images/recipes-mobile.png",
+  },
 ];
 
 export default PROJECTS;
