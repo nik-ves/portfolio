@@ -19,7 +19,7 @@ const DesktopNavigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/projects" exact activeClassName={classes.active}>
+          <NavLink to="/projects" activeClassName={classes.active}>
             Projects
           </NavLink>
         </li>

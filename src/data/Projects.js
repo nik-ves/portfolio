@@ -220,19 +220,21 @@ const PROJECTS = [
   },
   {
     id: 14,
-    name: "food-order",
+    name: "virtual-museum",
     type: "React",
     shortDescription:
-      "Food ordering app which is connected with Firebase database. Includes a simple form validation.",
+      "Virtual Museum application that enables its authenticated users to browse through history.",
     longDescription: {
-      text1: "Food ordering app",
+      text1: "Virtual Museum",
       text2:
-        "Currently my most complex project built, also one of the projects from Udemy course designed by Maximilian Schwarzmüller. This app is connected to a firebase database. After you select your food and amount, you can submit the data from the cart to the database.",
-      text3: "Made with React.js.",
+        "Virtual Museum application that enables its authenticated users to browse through history.",
+      text3:
+        "Some of the features this app includes are user authentication, form validaton, custom tour maker and editor, profile details and editor...",
+      text4: "Made with React.js.",
     },
-    githubLink: "https://github.com/nik-ves/natours",
-    previewLink: "https://order-food-nik-ves.netlify.app",
-    imgPath: "/images/food-order-project.png",
+    githubLink: "https://github.com/nik-ves/virtual-museum-app",
+    previewLink: "https://museum-nik-ves.netlify.app",
+    imgPath: "/images/virtual-museum.png",
   },
   {
     id: 15,
@@ -252,16 +254,16 @@ const PROJECTS = [
   },
   {
     id: 16,
-    name: "todo-app",
+    name: "personalized-todo-app",
     type: "React",
-    shortDescription: "Basic Todo app.",
+    shortDescription: "Personalized Todo application.",
     longDescription: {
-      text1: "Todo App",
+      text1: "Personalized Todo App",
       text2:
-        "Classic todo application. Includes checkbox and remove button for completed ones.",
+        "To see or make todos, you need to sign up, or sign in if you already have an account. After authentication, you can start making your todos. Each todo will be saved on Firebase server and your todos will be waiting you next time you log in.",
       text3: "Made with React.js.",
     },
-    githubLink: "https://github.com/nik-ves/todo-app",
+    githubLink: "https://github.com/nik-ves/personalized-todo-app",
     previewLink: "https://todo-nik-ves.netlify.app",
     imgPath: "/images/todo.png",
   },
