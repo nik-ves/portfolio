@@ -1,5 +1,5 @@
 import Container from "../UI/Container";
-import HomeText from "../homeComponents/HomeText";
+import HomeText from "../HomeComponents/HomeText";
 
 const Home = () => {
   return (
