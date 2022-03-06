@@ -2,11 +2,12 @@ import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
 import CSSTransition from "react-transition-group/CSSTransition";
 
 import {
-  HorizontalLine,
   Navigation,
   NavigationLink,
   SocialLinks,
 } from "./MobileNavigationStyles";
+
+import * as Line from "../UI/Lines";
 
 const MobileNavigation = ({ showMenu, setShowMenu }) => {
   const links = {
@@ -46,7 +47,6 @@ const MobileNavigation = ({ showMenu, setShowMenu }) => {
             <NavigationLink
               onClick={setFalse}
               to="/projects"
-              exact
               activeClassName="active"
             >
               Projects
@@ -63,7 +63,8 @@ const MobileNavigation = ({ showMenu, setShowMenu }) => {
             </NavigationLink>
           </li>
           <li>
-            <HorizontalLine />
+            {/* <HorizontalLine /> */}
+            <Line.Horizontal />
           </li>
           <SocialLinks>
             <li>

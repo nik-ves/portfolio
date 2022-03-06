@@ -66,7 +66,7 @@ export const NavigationLink = styled(NavLink)`
   color: white;
 
   &.active {
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
   }
 `;
 
@@ -81,11 +81,4 @@ export const SocialLinks = styled.div`
     color: white;
     text-decoration: none;
   }
-`;
-
-export const HorizontalLine = styled.span`
-  display: block;
-  width: 100px;
-  border-bottom: 3px solid #dc843a;
-  margin: 0 auto;
 `;

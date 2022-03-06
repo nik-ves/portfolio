@@ -10,7 +10,7 @@ const IconBox = styled.div`
 
 const IconBoxFixed = styled.div`
   cursor: pointer;
-  z-index: 100;
+  z-index: 5;
   position: fixed;
   top: 1;
   right: 0;
@@ -19,7 +19,7 @@ const IconBoxFixed = styled.div`
 
 const Icon = styled(GiHamburgerMenu)`
   display: none;
-  z-index: 1000;
+  z-index: 5;
   color: #dc843a;
 
   @media only screen and (max-width: 550px) {

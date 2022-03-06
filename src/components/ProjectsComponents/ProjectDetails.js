@@ -4,7 +4,6 @@ import { useParams } from "react-router";
 import {
   Description,
   EnlargedImageBox,
-  HeadingSecondary,
   ImageBox,
   InfoBox,
   Links,
@@ -12,6 +11,8 @@ import {
   TextBox,
   Wrapper,
 } from "./ProjectDetailsStyles";
+
+import * as Headers from "../UI/Headers";
 
 import PageNotFound from "../../pages/PageNotFound";
 import Container from "../UI/Container";
@@ -64,7 +65,9 @@ const ProjectDetails = () => {
 
         <InfoBox>
           <div>
-            <HeadingSecondary>{formatedName(project.name)}</HeadingSecondary>
+            <Headers.Secondary Title>
+              {formatedName(project.name)}
+            </Headers.Secondary>
             <PictureText>Click on the image to see its preview.</PictureText>
           </div>
 

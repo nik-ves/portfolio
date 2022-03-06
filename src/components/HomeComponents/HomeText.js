@@ -1,10 +1,8 @@
-import {
-  Name,
-  Wrapper,
-  TextContainer,
-  Paragraph,
-  HorizontalLine,
-} from "./HomeStyles";
+import { Wrapper, TextContainer, Paragraph } from "./HomeStyles";
+
+import * as Line from "../UI/Lines";
+
+import * as Headers from "../UI/Headers";
 
 const HomeText = () => {
   const links = {
@@ -17,7 +15,7 @@ const HomeText = () => {
   return (
     <Wrapper>
       <TextContainer>
-        <Name>Nikola Veselinović</Name>
+        <Headers.Primary>Nikola Veselinović</Headers.Primary>
 
         <Paragraph>
           Hello, my name is Nikola Veselinović, fourth year student at
@@ -46,7 +44,7 @@ const HomeText = () => {
           going to the arcade or just listening to music.
         </Paragraph>
 
-        <HorizontalLine />
+        <Line.Horizontal big />
 
         <Paragraph>
           Find me on{" "}

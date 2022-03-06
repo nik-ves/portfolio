@@ -72,24 +72,11 @@ export const FormControl = styled.div`
 export const IntroBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   max-width: 45rem;
 
   @media only screen and (max-width: 550px) {
     align-self: flex-start;
-  }
-`;
-
-export const HeadingSecondary = styled.h2`
-  align-self: flex-start;
-  font-size: 3rem;
-  color: #dc843a;
-  display: inline-block;
-  border-bottom: 3px solid #dc843a;
-  margin-bottom: 1rem;
-
-  @media only screen and (max-width: 550px) {
-    font-size: 2.5rem;
   }
 `;
 

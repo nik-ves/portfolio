@@ -25,10 +25,6 @@ export const Wrapper = styled.div`
   & a:hover {
     color: #fff;
   }
-
-  & a:focus {
-    color: #dc843a;
-  }
 `;
 
 export const ShowAll = styled.p`

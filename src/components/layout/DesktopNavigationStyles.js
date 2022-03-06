@@ -49,9 +49,3 @@ export const SocialLink = styled.a`
     color: white;
   }
 `;
-
-export const VerticalLine = styled.span`
-  display: block;
-  height: 30px;
-  border-right: 1px solid #fff;
-`;

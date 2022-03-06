@@ -9,12 +9,13 @@ import {
   ErrorText,
   FormActions,
   FormControl,
-  HeadingSecondary,
   IntroBox,
   Paragraph,
   SuccessText,
   Wrapper,
 } from "./FormStyles";
+
+import * as Headers from "../UI/Headers";
 
 const Form = () => {
   const form = useRef();
@@ -142,7 +143,7 @@ const Form = () => {
       </ContactForm>
 
       <IntroBox>
-        <HeadingSecondary>Contact</HeadingSecondary>
+        <Headers.Secondary>Contact</Headers.Secondary>
         <Paragraph>
           Get in touch with me if you have any questions and i'll get back to
           you as soon as i can!

@@ -25,11 +25,11 @@ export const ImageBox = styled.div`
     @media only screen and (max-width: 850px) {
       max-width: 100%;
     }
-  }
 
-  @media only screen and (max-width: 550px) {
-    height: 30rem;
-    max-width: 100%;
+    @media only screen and (max-width: 550px) {
+      height: 30rem;
+      max-width: 100%;
+    }
   }
 `;
 
@@ -84,20 +84,6 @@ export const TextBox = styled.div`
 
   @media only screen and (max-width: 550px) {
     margin: 3rem 0;
-  }
-`;
-
-export const HeadingSecondary = styled.h2`
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 1.5rem;
-
-  @media only screen and (max-width: 850px) {
-    font-size: 2.5rem;
-  }
-
-  @media only screen and (max-width: 550px) {
-    font-size: 2rem;
   }
 `;
 

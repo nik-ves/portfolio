@@ -6,6 +6,6 @@ export default styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 290;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.75);
 `;

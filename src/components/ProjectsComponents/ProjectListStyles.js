@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { css } from "styled-components";
 
 export const Wrapper = styled.div`
   max-width: 65rem;
@@ -8,33 +7,6 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 550px) {
     margin-top: 1.5rem;
   }
-`;
-
-export const HeadingSecondary = styled.h2`
-  font-size: 3rem;
-  color: #dc843a;
-  display: inline-block;
-  border-bottom: 3px solid #dc843a;
-  margin-bottom: 1rem;
-`;
-
-export const HeadingQuaternary = styled.h2`
-  font-size: 2rem;
-  color: #fff;
-
-  @media only screen and (max-width: 750px) {
-    font-size: 2.5rem;
-  }
-
-  @media only screen and (max-width: 550px) {
-    font-size: 2.5rem;
-  }
-
-  ${(props) =>
-    props.marginTop &&
-    css`
-      margin-top: 3rem;
-    `}
 `;
 
 export const Cards = styled.div`

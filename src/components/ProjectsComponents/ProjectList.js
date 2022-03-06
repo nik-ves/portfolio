@@ -1,12 +1,7 @@
 import { useState } from "react";
 
-import {
-  Cards,
-  HeadingQuaternary,
-  HeadingSecondary,
-  Paragraph,
-  Wrapper,
-} from "./ProjectListStyles";
+import { Cards, Paragraph, Wrapper } from "./ProjectListStyles";
+import * as Headers from "../UI/Headers";
 
 import ProjectCard from "./ProjectCard";
 import PROJECTS from "../../data/Projects";
@@ -16,7 +11,7 @@ const ProjectList = () => {
 
   return (
     <Wrapper>
-      <HeadingSecondary>Projects</HeadingSecondary>
+      <Headers.Secondary>Projects</Headers.Secondary>
 
       <Paragraph>
         Some of the projects that i'm proud of. <br /> All of the project cards
@@ -29,7 +24,7 @@ const ProjectList = () => {
       </Paragraph>
 
       <div>
-        <HeadingQuaternary>Landing page projects</HeadingQuaternary>
+        <Headers.Tertiary>Landing page projects</Headers.Tertiary>
 
         <Cards>
           {projects
@@ -46,7 +41,7 @@ const ProjectList = () => {
       </div>
 
       <div>
-        <HeadingQuaternary marginTop>Javascript projects</HeadingQuaternary>
+        <Headers.Tertiary marginTop>Javascript projects</Headers.Tertiary>
 
         <Cards>
           {projects
@@ -63,7 +58,7 @@ const ProjectList = () => {
       </div>
 
       <div>
-        <HeadingQuaternary marginTop>React projects</HeadingQuaternary>
+        <Headers.Tertiary marginTop>React projects</Headers.Tertiary>
 
         <Cards>
           {projects
@@ -80,7 +75,7 @@ const ProjectList = () => {
       </div>
 
       <div>
-        <HeadingQuaternary marginTop>React Native projects</HeadingQuaternary>
+        <Headers.Tertiary marginTop>React Native projects</Headers.Tertiary>
 
         <Cards>
           {projects

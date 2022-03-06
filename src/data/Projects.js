@@ -193,7 +193,6 @@ const PROJECTS = [
     shortDescription:
       "Tracker expense app made with React.js. Includes a year filter.",
     longDescription: {
-      text1: "Tracker expense app",
       text2:
         "This would be my first React.js project made and is one of the project from Udemy course designed by Maximilian Schwarzmüller. Includes adding your expenses by a year, which you can filter through. Also includes a graph which show you your expenses by months.",
       text3: "Made with React.js.",
@@ -225,7 +224,6 @@ const PROJECTS = [
     shortDescription:
       "Virtual Museum application that enables its authenticated users to browse through history.",
     longDescription: {
-      text1: "Virtual Museum",
       text2:
         "Virtual Museum application that enables its authenticated users to browse through history.",
       text3:
@@ -243,7 +241,6 @@ const PROJECTS = [
     shortDescription:
       "Validate user input with this. After submiting, user information will be shown in the console.",
     longDescription: {
-      text1: "Form validator.",
       text2:
         "Goal of this app was to practice validation of the form as the name suggests. Form is made of four input fields. After you submit your data, if the form allows you, you can see your submited data in the console.",
       text3: "Made with React.js.",
@@ -258,7 +255,6 @@ const PROJECTS = [
     type: "React",
     shortDescription: "Personalized Todo application.",
     longDescription: {
-      text1: "Personalized Todo App",
       text2:
         "To see or make todos, you need to sign up, or sign in if you already have an account. After authentication, you can start making your todos. Each todo will be saved on Firebase server and your todos will be waiting you next time you log in.",
       text3: "Made with React.js.",
@@ -273,7 +269,6 @@ const PROJECTS = [
     type: "React Native",
     shortDescription: "Help your phone guess your hidden number!",
     longDescription: {
-      text1: "Guess A Number Game",
       text2:
         "Goal of the game is to guide your phone to guess the hidden number you chose at the beginning of the game. Press - for a lower number or + for a greater number. After the computer successfully guesses it, victory screen will show how many rounds your phone needed to guess it!",
       text3: "Made with React Native.",
@@ -288,7 +283,6 @@ const PROJECTS = [
     type: "React Native",
     shortDescription: "Simple mobile todo application.",
     longDescription: {
-      text1: "Todo Application",
       text2:
         "Mobile application for your todos. Includes creating and deleting functions.",
       text3: "Made with React Native.",
@@ -304,7 +298,6 @@ const PROJECTS = [
     shortDescription:
       "Personalized recipes application fetched from forkify API.",
     longDescription: {
-      text1: "Personalized Recipes App",
       text2:
         "Faculty project in which the goal was to fetch recipes fron an external API, show them to user and provide details for each recipe. Logged in user can chose to favorite the ones he likes. After the inital log in, application will remember user in its memory so user won't have to log in again.",
       text3: "Made with React Native.",

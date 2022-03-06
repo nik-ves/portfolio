@@ -3,9 +3,10 @@ import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
 import {
   Navigation,
   SocialLink,
-  VerticalLine,
   NavigationLink,
 } from "./DesktopNavigationStyles";
+
+import * as Line from "../UI/Lines";
 
 const DesktopNavigation = () => {
   const links = {
@@ -33,7 +34,7 @@ const DesktopNavigation = () => {
           </NavigationLink>
         </li>
         <li>
-          <VerticalLine />
+          <Line.Vertical />
         </li>
         <li>
           <SocialLink href={links.github} target="_blank" rel="noreferrer">
