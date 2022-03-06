@@ -1,8 +1,12 @@
-import { NavLink } from "react-router-dom";
 import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
 import CSSTransition from "react-transition-group/CSSTransition";
 
-import classes from "./MobileNavigation.module.css";
+import {
+  HorizontalLine,
+  Navigation,
+  NavigationLink,
+  SocialLinks,
+} from "./MobileNavigationStyles";
 
 const MobileNavigation = ({ showMenu, setShowMenu }) => {
   const links = {
@@ -22,82 +26,64 @@ const MobileNavigation = ({ showMenu, setShowMenu }) => {
       mountOnEnter
       unmountOnExit
       classNames={{
-        // enterActive: "hamburger-open",
-        // exitActive: "hamburger-close",
-        enterActive: classes["hamburger-open"],
-        exitActive: classes["hamburger-close"],
+        enterActive: "hamburger-open",
+        exitActive: "hamburger-close",
       }}
     >
-      <div className={classes["hamburger-nav"]}>
-        {/* <div className="hamburger-nav"> */}
-        <ul className={classes["hamburger-menu"]}>
+      <Navigation>
+        <ul>
           <li>
-            <NavLink
+            <NavigationLink
               onClick={setFalse}
               to="/"
               exact
-              activeClassName={classes.active}
+              activeClassName="active"
             >
               Home
-            </NavLink>
+            </NavigationLink>
           </li>
           <li>
-            <NavLink
+            <NavigationLink
               onClick={setFalse}
               to="/projects"
               exact
-              activeClassName={classes.active}
+              activeClassName="active"
             >
               Projects
-            </NavLink>
+            </NavigationLink>
           </li>
           <li>
-            <NavLink
+            <NavigationLink
               onClick={setFalse}
               to="/contact"
               exact
-              activeClassName={classes.active}
+              activeClassName="active"
             >
               Contact
-            </NavLink>
+            </NavigationLink>
           </li>
           <li>
-            <span className={classes["line-horizontal"]}></span>
+            <HorizontalLine />
           </li>
-          <ul className={classes["hamburger-socials"]}>
+          <SocialLinks>
             <li>
-              <a
-                className={classes.socials}
-                href={links.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FiGithub size={22} className={classes.socials} />
+              <a href={links.github} target="_blank" rel="noreferrer">
+                <FiGithub size={22} />
               </a>
             </li>
             <li>
-              <a
-                className={classes.socials}
-                href={links.instagram}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FiInstagram size={22} className={classes.socials} />
+              <a href={links.instagram} target="_blank" rel="noreferrer">
+                <FiInstagram size={22} />
               </a>
             </li>
             <li>
-              <a
-                className={classes.socials}
-                href={links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FiLinkedin size={22} className={classes.socials} />
+              <a href={links.linkedin} target="_blank" rel="noreferrer">
+                <FiLinkedin size={22} />
               </a>
             </li>
-          </ul>
+          </SocialLinks>
         </ul>
-      </div>
+      </Navigation>
     </CSSTransition>
   );
 };

@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-import classes from "./ProjectList.module.css";
+import {
+  Cards,
+  HeadingQuaternary,
+  HeadingSecondary,
+  Paragraph,
+  Wrapper,
+} from "./ProjectListStyles";
+
 import ProjectCard from "./ProjectCard";
 import PROJECTS from "../../data/Projects";
 
@@ -8,10 +15,10 @@ const ProjectList = () => {
   const [projects] = useState(PROJECTS);
 
   return (
-    <div className={classes.wrapper}>
-      <h2>Projects</h2>
+    <Wrapper>
+      <HeadingSecondary>Projects</HeadingSecondary>
 
-      <p className={classes.text}>
+      <Paragraph>
         Some of the projects that i'm proud of. <br /> All of the project cards
         will take you to their GitHub repository which includes live preview of
         the project. If you want to see full list of my projects go to my{" "}
@@ -19,12 +26,12 @@ const ProjectList = () => {
           GitHub
         </a>{" "}
         page.
-      </p>
+      </Paragraph>
 
       <div>
-        <h4>Landing page projects</h4>
+        <HeadingQuaternary>Landing page projects</HeadingQuaternary>
 
-        <div className={classes.flex}>
+        <Cards>
           {projects
             .filter((project) => project.type === "Landing page")
             .map((project) => (
@@ -35,13 +42,13 @@ const ProjectList = () => {
                 link={`/projects/${project.name}`}
               />
             ))}
-        </div>
+        </Cards>
       </div>
 
       <div>
-        <h4 className={classes["margin-top"]}>Javascript projects</h4>
+        <HeadingQuaternary marginTop>Javascript projects</HeadingQuaternary>
 
-        <div className={classes.flex}>
+        <Cards>
           {projects
             .filter((project) => project.type === "Javascript")
             .map((project) => (
@@ -52,13 +59,13 @@ const ProjectList = () => {
                 link={`/projects/${project.name}`}
               />
             ))}
-        </div>
+        </Cards>
       </div>
 
       <div>
-        <h4 className={classes["margin-top"]}>React projects</h4>
+        <HeadingQuaternary marginTop>React projects</HeadingQuaternary>
 
-        <div className={classes.flex}>
+        <Cards>
           {projects
             .filter((project) => project.type === "React")
             .map((project) => (
@@ -69,13 +76,13 @@ const ProjectList = () => {
                 link={`/projects/${project.name}`}
               />
             ))}
-        </div>
+        </Cards>
       </div>
 
       <div>
-        <h4 className={classes["margin-top"]}>React Native projects</h4>
+        <HeadingQuaternary marginTop>React Native projects</HeadingQuaternary>
 
-        <div className={classes.flex}>
+        <Cards>
           {projects
             .filter((project) => project.type === "React Native")
             .map((project) => (
@@ -86,11 +93,11 @@ const ProjectList = () => {
                 link={`/projects/${project.name}`}
               />
             ))}
-        </div>
+        </Cards>
       </div>
 
-      <p className={classes.text}>Last updated: 06.02.2022.</p>
-    </div>
+      <Paragraph>Last updated: 06.02.2022.</Paragraph>
+    </Wrapper>
   );
 };
 

@@ -1,18 +1,22 @@
 import { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 
+import GlobalStyles from "./GlobalStyles";
+
 import MainNavigation from "./components/layout/MainNavigation";
-import Home from "./components/pages/Home";
-import Projects from "./components/pages/Projects";
-import Contact from "./components/pages/Contact";
-import ProjectDetail from "./components/pages/ProjectDetail";
-import PageNotFound from "./components/pages/PageNotFound";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import ProjectDetail from "./pages/ProjectDetail";
+import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/UI/ScrollToTop";
 
 function App() {
   return (
     <Fragment>
+      <GlobalStyles />
+
       <MainNavigation />
 
       <ScrollToTop />

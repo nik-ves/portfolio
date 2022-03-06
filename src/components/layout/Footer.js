@@ -1,13 +1,28 @@
-import classes from "./Footer.module.css";
 import Container from "../UI/Container";
+import styled from "styled-components";
+
+const Wrapper = styled.footer`
+  height: calc(100% - 360px);
+  padding: 3rem;
+`;
+
+const Paragraph = styled.p`
+  color: grey;
+  font-size: 1.5rem;
+  text-align: center;
+
+  @media only screen and (max-width: 550px) {
+    font-size: 1.3rem;
+  }
+`;
 
 const Footer = () => {
   return (
-    <footer className={classes.footer}>
+    <Wrapper>
       <Container>
-        <p>{new Date().getFullYear()} © Nikola Veselinović</p>
+        <Paragraph>{new Date().getFullYear()} © Nikola Veselinović</Paragraph>
       </Container>
-    </footer>
+    </Wrapper>
   );
 };
 

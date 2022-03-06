@@ -1,31 +1,32 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import classes from "./MainNavigation.module.css";
 import Container from "../UI/Container";
 import MobileNavigation from "./MobileNavigation";
 import DesktopNavigation from "./DesktopNavigation";
 import HamburgerButton from "./HamburgerButton";
 
+import { Content, Logo, Wrapper } from "./MainNavigationStyles";
+
 const MainNavigation = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className={classes.header}>
+    <Wrapper>
       <Container>
-        <div className={classes.content}>
-          <div className={classes["logo-box"]}>
+        <Content>
+          <Logo>
             <Link to="/">nikves</Link>
-          </div>
+          </Logo>
 
           <HamburgerButton showMenu={showMenu} setShowMenu={setShowMenu} />
 
           <DesktopNavigation />
-        </div>
+        </Content>
 
         <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
-    </header>
+    </Wrapper>
   );
 };
 

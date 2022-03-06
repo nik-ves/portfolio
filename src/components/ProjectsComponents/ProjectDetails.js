@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { useParams } from "react-router";
 
-import classes from "./ProjectDetails.module.css";
+import {
+  Description,
+  EnlargedImageBox,
+  HeadingSecondary,
+  ImageBox,
+  InfoBox,
+  Links,
+  PictureText,
+  TextBox,
+  Wrapper,
+} from "./ProjectDetailsStyles";
 
-import ProjectNotFound from "../pages/ProjectNotFound";
+import PageNotFound from "../../pages/PageNotFound";
 import Container from "../UI/Container";
 import ProjectNavigation from "./ProjectNavigation";
 import Backdrop from "../UI/Backdrop";
@@ -22,7 +32,7 @@ const ProjectDetails = () => {
   const project = projects.find((project) => project.name === params.projectId);
 
   if (!project) {
-    return <ProjectNotFound />;
+    return <PageNotFound />;
   }
 
   let pageIndex = projects.findIndex(
@@ -42,37 +52,30 @@ const ProjectDetails = () => {
 
       {isOpen && <Backdrop onClick={openImageHandler} />}
 
-      <div className={classes.centered}>
-        <div className={classes["project-image-box"]}>
+      <Wrapper>
+        <ImageBox>
           <img src={project.imgPath} alt="img" onClick={openImageHandler} />
-        </div>
+        </ImageBox>
         {isOpen && (
-          <div
-            className={classes["project-image-enlarger"]}
-            onClick={openImageHandler}
-          >
+          <EnlargedImageBox onClick={openImageHandler}>
             <img src={project.imgPath} alt="img" onClick={openImageHandler} />
-          </div>
+          </EnlargedImageBox>
         )}
 
-        <div className={classes["project-info"]}>
+        <InfoBox>
           <div>
-            <h2>{formatedName(project.name)}</h2>
-            <p className={classes["picture-text"]}>
-              Click on the image to see its preview.
-            </p>
+            <HeadingSecondary>{formatedName(project.name)}</HeadingSecondary>
+            <PictureText>Click on the image to see its preview.</PictureText>
           </div>
 
-          <div className={classes["project-text-box"]}>
+          <TextBox>
             {Object.keys(project.longDescription).map((index) => {
               return (
-                <p key={index} className={classes["project-info-description"]}>
-                  {project.longDescription[index]}
-                </p>
+                <Description>{project.longDescription[index]}</Description>
               );
             })}
 
-            <p className={classes["project-info-links"]}>
+            <Links>
               Click{" "}
               <a href={project.previewLink} target="_blank" rel="noreferrer">
                 here
@@ -82,10 +85,10 @@ const ProjectDetails = () => {
                 here
               </a>{" "}
               to see project code on GitHub.
-            </p>
-          </div>
-        </div>
-      </div>
+            </Links>
+          </TextBox>
+        </InfoBox>
+      </Wrapper>
     </Container>
   );
 };

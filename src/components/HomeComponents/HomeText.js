@@ -1,5 +1,3 @@
-// import classes from "./HomeText.module.css";
-
 import {
   Name,
   Wrapper,
@@ -7,8 +5,6 @@ import {
   Paragraph,
   HorizontalLine,
 } from "./HomeStyles";
-
-// import * as Test from "./HomeStyles";
 
 const HomeText = () => {
   const links = {

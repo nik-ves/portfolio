@@ -1,7 +1,11 @@
-import { NavLink } from "react-router-dom";
 import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
 
-import classes from "./DesktopNavigation.module.css";
+import {
+  Navigation,
+  SocialLink,
+  VerticalLine,
+  NavigationLink,
+} from "./DesktopNavigationStyles";
 
 const DesktopNavigation = () => {
   const links = {
@@ -11,58 +15,43 @@ const DesktopNavigation = () => {
   };
 
   return (
-    <div className={classes.nav}>
+    <Navigation>
       <ul>
         <li>
-          <NavLink to="/" exact activeClassName={classes.active}>
+          <NavigationLink to="/" exact activeClassName="active">
             Home
-          </NavLink>
+          </NavigationLink>
         </li>
         <li>
-          <NavLink to="/projects" activeClassName={classes.active}>
+          <NavigationLink to="/projects" activeClassName="active">
             Projects
-          </NavLink>
+          </NavigationLink>
         </li>
         <li>
-          <NavLink to="/contact" exact activeClassName={classes.active}>
+          <NavigationLink to="/contact" exact activeClassName="active">
             Contact
-          </NavLink>
+          </NavigationLink>
         </li>
         <li>
-          <span className={classes["line-vertical"]}></span>
+          <VerticalLine />
         </li>
         <li>
-          <a
-            className={classes.socials}
-            href={links.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiGithub className={classes.socials} />
-          </a>
+          <SocialLink href={links.github} target="_blank" rel="noreferrer">
+            <FiGithub />
+          </SocialLink>
         </li>
         <li>
-          <a
-            className={classes.socials}
-            href={links.instagram}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiInstagram className={classes.socials} />
-          </a>
+          <SocialLink href={links.github} target="_blank" rel="noreferrer">
+            <FiInstagram />
+          </SocialLink>
         </li>
         <li>
-          <a
-            className={classes.socials}
-            href={links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiLinkedin className={classes.socials} />
-          </a>
+          <SocialLink href={links.github} target="_blank" rel="noreferrer">
+            <FiLinkedin />
+          </SocialLink>
         </li>
       </ul>
-    </div>
+    </Navigation>
   );
 };
 

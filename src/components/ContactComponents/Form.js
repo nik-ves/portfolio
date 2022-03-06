@@ -1,9 +1,20 @@
 import { useState, useRef } from "react";
 
-import classes from "./Form.module.css";
-
 import useInput from "../../hooks/use-input";
 import emailjs from "emailjs-com";
+
+import {
+  Button,
+  ContactForm,
+  ErrorText,
+  FormActions,
+  FormControl,
+  HeadingSecondary,
+  IntroBox,
+  Paragraph,
+  SuccessText,
+  Wrapper,
+} from "./FormStyles";
 
 const Form = () => {
   const form = useRef();
@@ -65,19 +76,17 @@ const Form = () => {
     setSuccessMessage(true);
   };
 
-  setTimeout(() => {
-    setSuccessMessage(false);
-  }, 10000);
+  if (successMessage) {
+    setTimeout(() => {
+      setSuccessMessage(false);
+    }, 5000);
+  }
 
   return (
-    <div className={classes.wrapper}>
-      <form
-        ref={form}
-        onSubmit={formSubmissionHandler}
-        className={classes.form}
-      >
-        <div className={classes["form-control"]}>
-          <div className={classes["form-control"]}>
+    <Wrapper>
+      <ContactForm ref={form} onSubmit={formSubmissionHandler}>
+        <FormControl>
+          <FormControl>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -88,13 +97,11 @@ const Form = () => {
               value={enteredName}
             />
             {nameHasError && (
-              <p className={classes["error-text"]}>
-                Name field must not be empty!
-              </p>
+              <ErrorText>Name field must not be empty!</ErrorText>
             )}
-          </div>
+          </FormControl>
 
-          <div className={classes["form-control"]}>
+          <FormControl>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -105,13 +112,11 @@ const Form = () => {
               value={enteredEmail}
             />
             {emailHasError && (
-              <p className={classes["error-text"]}>
-                Please enter a valid e-mail address!
-              </p>
+              <ErrorText>Please enter a valid e-mail address!</ErrorText>
             )}
-          </div>
+          </FormControl>
 
-          <div className={classes["form-control"]}>
+          <FormControl>
             <label htmlFor="message">Your message</label>
             <textarea
               id="message"
@@ -121,31 +126,29 @@ const Form = () => {
               value={enteredMessage}
             ></textarea>
             {messageHasError && (
-              <p className={classes["error-text"]}>
-                Message field must not be empty!
-              </p>
+              <ErrorText>Message field must not be empty!</ErrorText>
             )}
-          </div>
-        </div>
+          </FormControl>
+        </FormControl>
 
-        <div className={classes["form-actions"]}>
-          <button type="submit" disabled={!formIsValid}>
+        <FormActions>
+          <Button type="submit" disabled={!formIsValid}>
             Submit
-          </button>
+          </Button>
           {successMessage && (
-            <p className={classes["success-text"]}>Your message has been sent!</p>
+            <SuccessText>Your message has been sent!</SuccessText>
           )}
-        </div>
-      </form>
+        </FormActions>
+      </ContactForm>
 
-      <div className={classes["form-text-box"]}>
-        <h2>Contact</h2>
-        <p>
+      <IntroBox>
+        <HeadingSecondary>Contact</HeadingSecondary>
+        <Paragraph>
           Get in touch with me if you have any questions and i'll get back to
           you as soon as i can!
-        </p>
-      </div>
-    </div>
+        </Paragraph>
+      </IntroBox>
+    </Wrapper>
   );
 };
 
