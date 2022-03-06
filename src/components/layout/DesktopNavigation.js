@@ -42,12 +42,12 @@ const DesktopNavigation = () => {
           </SocialLink>
         </li>
         <li>
-          <SocialLink href={links.github} target="_blank" rel="noreferrer">
+          <SocialLink href={links.instagram} target="_blank" rel="noreferrer">
             <FiInstagram />
           </SocialLink>
         </li>
         <li>
-          <SocialLink href={links.github} target="_blank" rel="noreferrer">
+          <SocialLink href={links.linkedin} target="_blank" rel="noreferrer">
             <FiLinkedin />
           </SocialLink>
         </li>
