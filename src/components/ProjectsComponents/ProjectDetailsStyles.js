@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   margin: 5rem 0;
   justify-content: center;
   font-size: 3rem;
@@ -9,68 +11,6 @@ export const Wrapper = styled.div`
 
   @media only screen and (max-width: 550px) {
     margin: 3rem 0;
-  }
-`;
-
-export const ImageBox = styled.div`
-  display: flex;
-  justify-content: center;
-
-  & img {
-    border: 3px solid #dc843a;
-    height: 50rem;
-    width: 80rem;
-    object-fit: cover;
-
-    @media only screen and (max-width: 850px) {
-      max-width: 100%;
-    }
-
-    @media only screen and (max-width: 550px) {
-      height: 30rem;
-      max-width: 100%;
-    }
-  }
-`;
-
-export const EnlargedImageBox = styled.div`
-  z-index: 300;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  padding: 10rem 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  @media only screen and (max-width: 550px) {
-    padding-top: 10rem;
-  }
-
-  & img {
-    border: 3px solid #dc843a;
-    width: 70%;
-    height: 100%;
-
-    @media only screen and (max-width: 550px) {
-      width: 90%;
-    }
-  }
-`;
-
-export const PictureText = styled.p`
-  font-size: 1.3rem;
-  color: grey;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 1.5rem;
-
-  @media only screen and (max-width: 850px) {
-    font-size: 1.3rem;
-  }
-
-  @media only screen and (max-width: 550px) {
-    font-size: 1rem;
   }
 `;
 
@@ -132,4 +72,8 @@ export const Links = styled.p`
   & a:hover {
     border-bottom: 2px solid #dc843a;
   }
+`;
+
+export const ImageSlider = styled(Carousel)`
+  border: 3px solid #dc843a;
 `;

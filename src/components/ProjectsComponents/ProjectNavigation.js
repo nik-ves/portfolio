@@ -9,7 +9,7 @@ const ProjectNavigation = (props) => {
   const { goBackwards, goForwards } = usePage(props.currentProject);
 
   return (
-    <Wrapper>
+    <Wrapper onClick={props.onProjectChange}>
       <Link to={goBackwards}>
         <FiArrowLeft size={30} />
       </Link>

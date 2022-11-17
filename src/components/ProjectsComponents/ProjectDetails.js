@@ -3,13 +3,11 @@ import { useParams } from "react-router";
 
 import {
   Description,
-  EnlargedImageBox,
-  ImageBox,
   InfoBox,
   Links,
-  PictureText,
   TextBox,
   Wrapper,
+  ImageSlider,
 } from "./ProjectDetailsStyles";
 
 import * as Headers from "../UI/Headers";
@@ -17,17 +15,12 @@ import * as Headers from "../UI/Headers";
 import PageNotFound from "../../pages/PageNotFound";
 import Container from "../UI/Container";
 import ProjectNavigation from "./ProjectNavigation";
-import Backdrop from "../UI/Backdrop";
 
 import PROJECTS from "../../data/Projects";
 
 const ProjectDetails = () => {
   const [projects] = useState(PROJECTS);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openImageHandler = () => {
-    setIsOpen(!isOpen);
-  };
+  let [startingImage, setStartingImage] = useState(0);
 
   const params = useParams();
   const project = projects.find((project) => project.name === params.projectId);
@@ -47,34 +40,50 @@ const ProjectDetails = () => {
       .join(" ");
   };
 
+  const setImageHandler = () => {
+    setStartingImage(0);
+  };
+
   return (
     <Container>
-      <ProjectNavigation projects={projects} currentProject={pageIndex} />
-
-      {isOpen && <Backdrop onClick={openImageHandler} />}
+      <ProjectNavigation
+        onProjectChange={setImageHandler}
+        projects={projects}
+        currentProject={pageIndex}
+      />
 
       <Wrapper>
-        <ImageBox>
-          <img src={project.imgPath} alt="img" onClick={openImageHandler} />
-        </ImageBox>
-        {isOpen && (
-          <EnlargedImageBox onClick={openImageHandler}>
-            <img src={project.imgPath} alt="img" onClick={openImageHandler} />
-          </EnlargedImageBox>
-        )}
+        <ImageSlider
+          selectedItem={startingImage}
+          onChange={(index) => {
+            setStartingImage(index);
+          }}
+          showStatus={false}
+          showThumbs={false}
+          infiniteLoop={true}
+        >
+          {Object.keys(project.images).map((index) => {
+            return (
+              <div key={index}>
+                <img src={project.images[index]} alt="project" />
+              </div>
+            );
+          })}
+        </ImageSlider>
 
         <InfoBox>
           <div>
             <Headers.Secondary Title>
               {formatedName(project.name)}
             </Headers.Secondary>
-            <PictureText>Click on the image to see its preview.</PictureText>
           </div>
 
           <TextBox>
             {Object.keys(project.longDescription).map((index) => {
               return (
-                <Description>{project.longDescription[index]}</Description>
+                <Description key={index}>
+                  {project.longDescription[index]}
+                </Description>
               );
             })}
 
