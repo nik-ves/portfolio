@@ -31,10 +31,11 @@ export const Description = styled.p`
   color: grey;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  line-height: 2.5rem;
+  line-height: 3.5rem;
 
   @media only screen and (max-width: 850px) {
     font-size: 1.5rem;
+    line-height: 3rem;
   }
 
   @media only screen and (max-width: 550px) {
@@ -42,38 +43,47 @@ export const Description = styled.p`
   }
 `;
 
-export const Links = styled.p`
-  color: grey;
-  margin-top: 2rem;
-  line-height: 2.5rem;
-  font-size: 1.8rem;
-
-  @media only screen and (max-width: 850px) {
-    font-size: 1.5rem;
-  }
-
-  @media only screen and (max-width: 550px) {
-    font-size: 1.3rem;
-  }
-
-  & a {
-    font-size: 1.8rem;
-    color: #dc843a;
-
-    @media only screen and (max-width: 850px) {
-      font-size: 1.5rem;
-    }
-
-    @media only screen and (max-width: 550px) {
-      font-size: 1.3rem;
-    }
-  }
-
-  & a:hover {
-    border-bottom: 2px solid #dc843a;
-  }
+export const Links = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const ImageSlider = styled(Carousel)`
   border: 3px solid #dc843a;
+`;
+
+export const Code = styled.code`
+  display: inline-block;
+  border: 3px solid #dc843a;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media only screen and (max-width: 850px) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 1.3rem;
+  }
+`;
+
+export const SocialLink = styled.a`
+  display: flex;
+  font-size: 2.8rem;
+  color: #dc843a;
+  transition: all 0.2s;
+  margin: 1rem;
+
+  @media only screen and (max-width: 850px) {
+    font-size: 2.3rem;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    color: white;
+  }
 `;

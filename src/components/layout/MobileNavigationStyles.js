@@ -39,6 +39,7 @@ export const Navigation = styled.nav`
     rgba(26, 30, 34, 1) 100%
   );
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 3;
 
   &.hamburger-open {
     animation: ${openHamburger} 0.4s ease-out forwards;

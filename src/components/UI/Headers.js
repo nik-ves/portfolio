@@ -23,6 +23,10 @@ export const Secondary = styled.h2`
   border-bottom: 3px solid #dc843a;
   margin-bottom: 1rem;
 
+  @media only screen and (max-width: 850px) {
+    font-size: 2.3rem;
+  }
+
   ${(props) =>
     props.Title &&
     css`
@@ -33,9 +37,18 @@ export const Secondary = styled.h2`
       justify-content: center;
     `}
 
-  @media only screen and (max-width: 850px) {
-    font-size: 2.5rem;
-  }
+  ${(props) =>
+    props.TitleLeft &&
+    css`
+      font-size: 2.7rem;
+      margin-bottom: 3rem;
+      color: white;
+      border-bottom: 3px solid white;
+
+      @media only screen and (max-width: 850px) {
+        margin-bottom: 1.5rem;
+      }
+    `}
 `;
 
 export const Tertiary = styled.h3`

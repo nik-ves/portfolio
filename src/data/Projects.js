@@ -3,11 +3,22 @@ const PROJECTS = [
     id: 1,
     name: "github-profile-search",
     description: "Enter your GitHub username and see your profile simplified.",
-    longDescription: {
-      text1: "Enter your GitHub username and see your profile simplified.",
+    about: {
+      text1:
+        "Github Profile Search project is a web app that allows you to see your GitHub profile simplified.",
       text2:
-        "Got the project idea from Twitter and tried to make it myself. Never before have I worked with fetch but managed to make it. Includes a back button when you're finished with the serach and also the ligth and dark mode switcher. Currently this project is limited to return only 30 projects on search.",
-      text3: "Made with vanilla JavaScript.",
+        "Idea was gotten from Twitter when I found out about the similar app called OctoProfile. OctoProfile gives you a nicer look at your Github profile with some charts.",
+    },
+    howItWorks: {
+      text1:
+        "When you open the app, you will see an input field in which you need to enter a GitHub username. After you enter the username, the app will check if it exists and if it doesn't, user will get that message back.",
+      text2:
+        "When the app finds the selected user it will show the basic data of profile and some repositories. Basic data consists of stuff like number of repositories, account created date, location, followers, following, etc.",
+      text3:
+        "Below the basic data, cards of each repository will be shown. Color of the card will be according to the language that was used the most in that project. Clicking on one of the cards will take you to it's GitHub repository.",
+    },
+    installation: {
+      text1: "installation",
     },
     githubLink: "https://github.com/nik-ves/github-profile-search",
     previewLink: "https://github-profile-search-nik-ves.netlify.app/",
@@ -21,12 +32,22 @@ const PROJECTS = [
     name: "virtual-museum",
     description:
       "Virtual Museum application that enables it's authenticated users to browse through history.",
-    longDescription: {
+    about: {
       text1:
-        "Virtual Museum application that enables it's authenticated users to browse through history.",
+        "This project was for a third year college subject where the goal was to create an online museum.",
       text2:
-        "Some of the features this app includes are user authentication, form validaton, custom tour maker and editor, profile details and editor...",
-      text3: "Made with React.js.",
+        "Virtual Museum is a web app that enables it's authenticated users to browse through history and see exibits.",
+    },
+    howItWorks: {
+      text1:
+        "First time you open this app, you will be on the home page. If you scroll down a bit you will get a taste of that you can see if you create an account or if you just sign in. ",
+      text2:
+        "When you sign in or sign up you will be able to use the app to the fullest. Some of the things you can do is see all of the settings, and each setting exhibit, modify your profile, comment on settings and exhibits, create your own tours etc...",
+      text3:
+        "Each of the settings and exhibits are represented by image and lengthy description which was taken from Wikipedia.",
+    },
+    installation: {
+      text1: "installation",
     },
     githubLink: "https://github.com/nik-ves/virtual-museum-app",
     previewLink: "https://museum-nik-ves.netlify.app",
@@ -48,10 +69,20 @@ const PROJECTS = [
     name: "itidaru",
     description:
       "Itidaru is a personalized todo app. Create an account to make your own todo list which will be waiting you next time you log in.",
-    longDescription: {
+    about: {
       text1:
-        "To see or make todos, you need to sign up, or sign in if you already have an account. After authentication, you can start making your todos. Each todo will be saved on Firebase server and your todos will be waiting you next time you log in.",
-      text2: "Made with React.js.",
+        "Itidaru represents a more complex project which connects frontend and backend. I was always interested in doing combination of both and this project was perfect for it. Not too difficult to create but covers all bases.",
+    },
+    howItWorks: {
+      text1:
+        "When you open the app, you will be greeted by the description of the app. You can create your todo items and save them to the server but only if you create an account and log in.",
+      text2:
+        "To create an account you need to meet some requirements that Firebase set. If some of the information is not correct, like not valid e-mail or password is too short, a message will be shown to the user so he knows what to fix.",
+      text3:
+        "After you sign in, you can start creating the todos. Edit and delete them whenever you feel like it. App supports dark and light color themes, which you can change by clicking the moon or the sun icon in the navigation.",
+    },
+    installation: {
+      text1: "installation",
     },
     githubLink: "https://github.com/nik-ves/itidaru-web",
     previewLink: "https://itidaru.netlify.app/my-todos",

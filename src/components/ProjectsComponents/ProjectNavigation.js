@@ -8,8 +8,12 @@ import usePage from "../../hooks/use-page";
 const ProjectNavigation = (props) => {
   const { goBackwards, goForwards } = usePage(props.currentProject);
 
+  const changeProjectHandler = () => {
+    props.onProjectChange();
+  };
+
   return (
-    <Wrapper onClick={props.onProjectChange}>
+    <Wrapper onClick={changeProjectHandler}>
       <Link to={goBackwards}>
         <FiArrowLeft size={30} />
       </Link>
