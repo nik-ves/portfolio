@@ -18,17 +18,26 @@ const HomeText = () => {
         <Headers.Primary>Nikola Veselinović</Headers.Primary>
 
         <Paragraph>
-          Hello, my name is Nikola Veselinović, fourth year student at
-          Singidunum University located in Belgrade, Serbia.
+          Hello, my name is Nikola Veselinović, currently working as a Microsoft
+          Dynamics developer located in Belgrade, Serbia.
         </Paragraph>
         <br />
 
         <Paragraph>
-          Dreaming up ideas and making them come true is where my passion lies.
-          <br />I have challenged myself to try to make at least 1 new project a
-          week. Currently my projects consist of landing pages, JavaScript games
-          and React apps but in the future i would like to broaden my stack.
+          For the last two years I've been spending my free time building
+          various applications, mostly for web, but from time to time I like to
+          mix it up a bit and build for other platforms.
         </Paragraph>
+        <br />
+
+        <Paragraph>
+          Technologies I'm currently using are all JavaScript related like
+          React.js, React Native, Node.js but i'm always open to learning new
+          ones. Since I've tried almost all of the JavaScript
+          frameworks/libraries, the next one in line is Electron.js for desktop
+          applications.
+        </Paragraph>
+        <br />
 
         <Paragraph>
           You can find my full projects list{" "}
@@ -38,11 +47,6 @@ const HomeText = () => {
           .
         </Paragraph>
         <br />
-
-        <Paragraph>
-          When i'm not studying I like to spend my free time by playing pool,
-          going to the arcade or just listening to music.
-        </Paragraph>
 
         <Line.Horizontal big />
 

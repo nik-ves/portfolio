@@ -19,7 +19,7 @@ export const TextContainer = styled.div`
 
 export const Paragraph = styled.p`
   font-size: 1.8rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
 
   & a {
     color: #dc843a;
@@ -31,6 +31,7 @@ export const Paragraph = styled.p`
 
   @media only screen and (max-width: 750px) {
     font-size: 1.5rem;
+    line-height: 3rem;
   }
 
   @media only screen and (max-width: 550px) {
