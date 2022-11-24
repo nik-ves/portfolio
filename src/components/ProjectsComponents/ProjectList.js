@@ -35,7 +35,6 @@ const ProjectList = () => {
           ))}
         </Cards>
       </div>
-      <Paragraph>Last updated: 06.02.2022.</Paragraph>
     </Wrapper>
   );
 };
